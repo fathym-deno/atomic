@@ -5,7 +5,7 @@ import {
   ActionStyleTypes,
   useActionChildren,
 } from "../atoms/Action.tsx";
-import { classSet } from "../utils/jsx.tsx";
+import { classSet } from "../utils/jsx.utils.tsx";
 import { MenuButton, MenuButtonStyleTypes } from "./MenuButton.tsx";
 
 export interface ActionGroupProps extends JSX.HTMLAttributes<HTMLElement> {

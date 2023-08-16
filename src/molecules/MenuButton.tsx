@@ -5,7 +5,7 @@ import {
   ActionStyleTypes,
   useActionChildren,
 } from "../atoms/Action.tsx";
-import { classSet } from "../utils/jsx.tsx";
+import { classSet } from "../utils/jsx.utils.tsx";
 
 export enum MenuButtonStyleTypes {
   Popover = 1 << 0,

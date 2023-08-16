@@ -7,7 +7,7 @@ import {
   ActionStyleTypes,
 } from "../atoms/Action.tsx";
 import { ActionGroup } from "../molecules/ActionGroup.tsx";
-import { classSet } from "../utils/jsx.tsx";
+import { classSet } from "../utils/jsx.utils.tsx";
 import { MenuButton, MenuButtonStyleTypes } from "../molecules/MenuButton.tsx";
 
 export class HeaderLogo {

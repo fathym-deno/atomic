@@ -1,5 +1,5 @@
 import { ComponentChildren, JSX } from "../src.deps.ts";
-import { classSet } from "../utils/jsx.tsx";
+import { classSet } from "../utils/jsx.utils.tsx";
 
 export enum DisplayStyleTypes {
   Top = 1 << 0,

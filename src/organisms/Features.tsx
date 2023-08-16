@@ -1,5 +1,5 @@
 import { ComponentChildren, JSX } from "../src.deps.ts";
-import { classSet } from "../utils/jsx.tsx";
+import { classSet } from "../utils/jsx.utils.tsx";
 import { DisplayProps, useDisplayChildren } from "../molecules/Display.tsx";
 import { ActionProps, useActionChildren } from "../atoms/Action.tsx";
 import { ActionGroup } from "../molecules/ActionGroup.tsx";
