@@ -56,7 +56,7 @@ export function MenuButton(props: MenuButtonProps) {
           onClick={() => setShowMenu(!showMenu)}
           class="flex items-center p-2 rounded"
         >
-          {props.toggleChildren}
+          <>{props.toggleChildren}</>
         </Action>
 
         {showMenu && (
