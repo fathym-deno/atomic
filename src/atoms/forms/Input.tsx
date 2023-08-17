@@ -1,16 +1,28 @@
-import { ComponentChildren, JSX, useState } from "../../src.deps.ts";
+import { ComponentChildren, type JSX, useState } from "../../src.deps.ts";
 import { classSet } from "../../utils/jsx.utils.tsx";
 
-export type InputProps = JSX.HTMLAttributes<HTMLInputElement>;
+export type InputProps = JSX.HTMLAttributes<HTMLInputElement> & {
+  prepareValue?: (value: string) => string;
+};
 
 export function Input(props: InputProps) {
-  const { value, ...rest } = props;
+  const { prepareValue, value, ...rest } = props;
 
   const [valueState, setValue] = useState(value);
 
   return (
     <input
-      onChange={(e) => setValue((e.target as HTMLInputElement)!.value)}
+      onChange={(e) => {
+        const target = (e.target as HTMLInputElement)!;
+
+        let value = target.value;
+
+        if (prepareValue) {
+          value = prepareValue(value);
+        }
+
+        setValue(value);
+      }}
       {...rest}
       value={valueState}
       type="text"
