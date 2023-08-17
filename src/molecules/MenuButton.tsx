@@ -54,7 +54,6 @@ export function MenuButton(props: MenuButtonProps) {
       {toggleChildren}
 
       <div class={classSet(props, "menu-wrapper relative")}>
-        {toggleChildren}
         <Action
           onClick={() => setShowMenu(!showMenu)}
           class="flex items-center p-2 rounded"
@@ -78,7 +77,7 @@ export function MenuButton(props: MenuButtonProps) {
                 : undefined,
             )}
           >
-            {props.toggleChildren}
+            {toggleChildren}
             {nav || (
               <ul class="divide-y divide-gray-200">
                 {navActions?.map((action) => (
