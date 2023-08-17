@@ -1,5 +1,5 @@
-import { ComponentChildren, JSX } from "../src.deps.ts";
-import { classSet } from "../utils/jsx.utils.tsx";
+import { ComponentChildren, JSX } from "../../src.deps.ts";
+import { classSet } from "../../utils/jsx.utils.tsx";
 
 export type SlideToggleProps = JSX.HTMLAttributes<HTMLInputElement>;
 
@@ -13,7 +13,7 @@ export function SlideToggle(props: SlideToggleProps) {
           props,
           "absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer transition-colors duration-200 ease-out",
           "checked:bg-blue-500 checked:border-blue-500",
-          "focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+          "focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500",
         )}
       />
       <label
@@ -22,11 +22,13 @@ export function SlideToggle(props: SlideToggleProps) {
       >
         <span
           class={classSet(
+            undefined,
             "block h-full w-6 rounded-full bg-white shadow-inner transition-transform duration-200 ease-out",
             "transform translate-x-0",
-            props.checked ? "translate-x-full" : ""
+            props.checked ? "translate-x-full" : "",
           )}
-        ></span>
+        >
+        </span>
       </label>
     </div>
   );
