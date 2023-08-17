@@ -22,7 +22,7 @@ export interface MenuButtonProps extends JSX.HTMLAttributes<HTMLElement> {
 }
 
 export function MenuButton(props: MenuButtonProps) {
-  const { toggleChildren, children } = props;
+  const { children, toggleChildren } = props;
 
   const { nav, navActions } = useActionChildren(children);
 
