@@ -19,19 +19,17 @@ export class HeaderLogo {
 }
 
 export function useHeaderLogoChildren(
-  children: ComponentChildren | Array<ActionProps>,
+  children: ComponentChildren | HeaderLogo,
 ): {
   logo: ComponentChildren;
   logoDetails: HeaderLogo | undefined;
   logoAction: JSX.Element;
 } {
-  const logo = children instanceof HeaderLogo
-    ? undefined
-    : children as ComponentChildren;
+  const isHeaderLogo = !!(children as HeaderLogo)?.LogoUrl;
 
-  const logoDetails = children instanceof HeaderLogo
-    ? children as HeaderLogo
-    : undefined;
+  const logo = isHeaderLogo ? undefined : children as ComponentChildren;
+
+  const logoDetails = isHeaderLogo ? children as HeaderLogo : undefined;
 
   const logoAction = (
     <Action

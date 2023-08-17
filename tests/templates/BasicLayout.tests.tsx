@@ -1,4 +1,11 @@
-import { Action, BasicLayout, Footer, Header } from "../../mod.ts";
+import {
+  Action,
+  BasicLayout,
+  factory,
+  Footer,
+  Header,
+  HeaderLogo,
+} from "../../mod.ts";
 import {
   afterEach,
   assert,
@@ -11,9 +18,16 @@ import {
 
 describe("Basic Layout Tests", () => {
   describe("With Props", () => {
+    const logo = {
+      LogoAlt: "Fathym Open BioTech",
+      LogoUrl: "/o-biotech-logo.svg",
+      LogoHref: "/",
+    };
+
     const header = (
       <Header
-        logo={<Action href="/">Hello World</Action>}
+        title="Hello World"
+        logo={logo}
         nav={
           <>
             <Action href="/" class="text-xl mx-1">
@@ -60,10 +74,13 @@ describe("Basic Layout Tests", () => {
       </BasicLayout>,
     );
 
+    console.log(html);
+
     assert(html.includes(`main class="flex-grow"`));
     assert(html.includes(`<h2>This is the main content.</h2>`));
     assert(html.includes("This is a description of the test"));
     assert(html.includes("Hello World"));
+    assert(html.includes("/o-biotech-logo.svg"));
   });
 
   describe("With Components", () => {
