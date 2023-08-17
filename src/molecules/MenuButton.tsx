@@ -47,17 +47,19 @@ export function MenuButton(props: MenuButtonProps) {
 
   useEffect(outsideClickHandler, []);
 
+  const { toggleChildren } = props;
+
   return (
     <>
-      {props.toggleChildren}
+      {toggleChildren}
 
       <div class={classSet(props, "menu-wrapper relative")}>
-        {props.toggleChildren}
+        {toggleChildren}
         <Action
           onClick={() => setShowMenu(!showMenu)}
           class="flex items-center p-2 rounded"
         >
-          <>{props.toggleChildren}</>
+          {toggleChildren}
         </Action>
 
         {showMenu && (
