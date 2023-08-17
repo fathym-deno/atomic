@@ -11,8 +11,6 @@ export interface ResponsiveSetProps extends JSX.HTMLAttributes<HTMLElement> {
 export function ResponsiveSet(props: ResponsiveSetProps) {
   return (
     <>
-      {props.toggleChildren}
-
       <MenuButton
         class="md:hidden"
         menuStyle={props.menuStyle || MenuButtonStyleTypes.Responsive}
