@@ -22,7 +22,9 @@ export interface MenuButtonProps extends JSX.HTMLAttributes<HTMLElement> {
 }
 
 export function MenuButton(props: MenuButtonProps) {
-  const { nav, navActions } = useActionChildren(props.children);
+  const { toggleChildren, children } = props;
+
+  const { nav, navActions } = useActionChildren(children);
 
   const [showMenu, setShowMenu] = useState(false);
 
@@ -46,8 +48,6 @@ export function MenuButton(props: MenuButtonProps) {
   };
 
   useEffect(outsideClickHandler, []);
-
-  const { toggleChildren } = props;
 
   return (
     <>
@@ -77,7 +77,6 @@ export function MenuButton(props: MenuButtonProps) {
                 : undefined,
             )}
           >
-            {toggleChildren}
             {nav || (
               <ul class="divide-y divide-gray-200">
                 {navActions?.map((action) => (
