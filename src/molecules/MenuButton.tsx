@@ -51,8 +51,6 @@ export function MenuButton(props: MenuButtonProps) {
 
   return (
     <>
-      {toggleChildren}
-
       <div class={classSet(props, "menu-wrapper relative")}>
         <Action
           onClick={() => setShowMenu(!showMenu)}
