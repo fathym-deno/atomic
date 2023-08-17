@@ -49,6 +49,8 @@ export function MenuButton(props: MenuButtonProps) {
 
   return (
     <div class={classSet(props, "menu-wrapper relative")}>
+      {props.toggleChildren}
+
       <Action
         onClick={() => setShowMenu(!showMenu)}
         class="flex items-center p-2 rounded"
