@@ -1,4 +1,4 @@
-import { ComponentChildren, JSX } from "../../src.deps.ts";
+import { ComponentChildren, JSX, useState } from "../../src.deps.ts";
 import { classSet } from "../../utils/jsx.utils.tsx";
 
 export type SlideToggleProps = JSX.HTMLAttributes<HTMLInputElement> & {
@@ -6,32 +6,34 @@ export type SlideToggleProps = JSX.HTMLAttributes<HTMLInputElement> & {
 };
 
 export function SlideToggle(props: SlideToggleProps) {
+  const { checked, ...rest } = props;
+
+  const [checkedState, setCheckedState] = useState(checked);
+
   return (
-    <div class="relative inline-block w-10 mr-2 align-middle select-none">
+    <label className="relative inline-flex items-center cursor-pointer">
       <input
+        value=""
         {...props}
         type="checkbox"
-        class={classSet(
-          props,
-          "absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer transition-colors duration-200 ease-out",
-          "checked:bg-blue-500 checked:border-blue-500",
-          "focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500",
-        )}
+        class="sr-only peer"
+        checked={checkedState}
+        onChange={() => setCheckedState(!checked)}
       />
-      <label
-        for={props.id}
-        class="block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"
+
+      <div
+        className={classSet(
+          props,
+          "w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600",
+        )}
       >
-        <span
-          class={classSet(
-            undefined,
-            "block h-full w-6 rounded-full bg-white shadow-inner transition-transform duration-200 ease-out",
-            "transform translate-x-0",
-            props.checked ? "translate-x-full" : "",
-          )}
-        >
+      </div>
+
+      {props.children && (
+        <span className="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+          {props.children}
         </span>
-      </label>
-    </div>
+      )}
+    </label>
   );
 }
