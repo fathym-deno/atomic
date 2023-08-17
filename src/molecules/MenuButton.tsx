@@ -22,9 +22,7 @@ export interface MenuButtonProps extends JSX.HTMLAttributes<HTMLElement> {
 }
 
 export function MenuButton(props: MenuButtonProps) {
-  const { children, toggleChildren } = props;
-
-  const { nav, navActions } = useActionChildren(children);
+  const { nav, navActions } = useActionChildren(props.children);
 
   const [showMenu, setShowMenu] = useState(false);
 
@@ -56,7 +54,7 @@ export function MenuButton(props: MenuButtonProps) {
           onClick={() => setShowMenu(!showMenu)}
           class="flex items-center p-2 rounded"
         >
-          {toggleChildren}
+          {props.toggleChildren}
         </Action>
 
         {showMenu && (
