@@ -16,13 +16,21 @@ export interface BasicLayoutProps extends JSX.HTMLAttributes<HTMLDivElement> {
 
 export function BasicLayout(props: BasicLayoutProps) {
   const { headerProps, header } = {
-    headerProps: props.header as HeaderProps,
-    header: props.header as ComponentChildren,
+    headerProps: (props.header as HeaderProps)?.nav
+      ? props.header as HeaderProps
+      : undefined,
+    header: !(props.header as HeaderProps)?.nav
+      ? props.header as ComponentChildren
+      : undefined,
   };
 
   const { footerProps, footer } = {
-    footerProps: props.footer as FooterProps,
-    footer: props.footer as ComponentChildren,
+    footerProps: (props.footer as FooterProps)?.nav
+      ? props.footer as FooterProps
+      : undefined,
+    footer: !(props.footer as FooterProps)?.nav
+      ? props.footer as ComponentChildren
+      : undefined,
   };
 
   return (
