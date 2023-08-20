@@ -16,8 +16,6 @@ describe("Menu Button Tests", () => {
       </MenuButton>,
     );
 
-    console.log(html);
-
     assert(html.includes("<h1>Menu</h1>"));
   });
 });
