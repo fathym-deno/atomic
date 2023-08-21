@@ -1,4 +1,4 @@
-# Fathym Atomic Library
+# Fathym Atomic Design Kit
 
 The Fathym Atomic Library is a base atomic library that is designed to be composed into domain-specific component libraries. This approach allows for a high degree of modularity and reusability in your UI development.
 
