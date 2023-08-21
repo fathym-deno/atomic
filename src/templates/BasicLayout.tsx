@@ -39,7 +39,7 @@ export function BasicLayout(props: BasicLayoutProps) {
 
       {props.children && (
         <main
-          class={classSet(props, "flex-grow", "h-[calc(100vh_-_15vh)]")}
+          class={classSet(props, "flex-grow", "min-h-[calc(100vh_-_15vh)]")}
         >
           {props.children}
         </main>
