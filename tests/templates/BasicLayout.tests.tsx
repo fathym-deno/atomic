@@ -74,8 +74,6 @@ describe("Basic Layout Tests", () => {
       </BasicLayout>,
     );
 
-    console.log(html);
-
     assert(html.includes(`main class="flex-grow min-h-[calc(100vh_-_15vh)]"`));
     assert(html.includes(`<h2>This is the main content.</h2>`));
     assert(html.includes("This is a description of the test"));
