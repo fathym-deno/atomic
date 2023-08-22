@@ -1,2 +1,6 @@
-import "./ActionGroup.tests.tsx";
-import "./MenuButton.tests.tsx";
+import { runTests } from '../../test.deps.ts';
+
+import './Display.tests.ts';
+import './ResponsiveSet.tests.ts';
+
+runTests();
