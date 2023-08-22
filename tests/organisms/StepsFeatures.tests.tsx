@@ -1,4 +1,12 @@
-import { afterEach, assert, assertEquals, beforeEach, describe, it, render } from "../test.deps.ts";
+import {
+  afterEach,
+  assert,
+  assertEquals,
+  beforeEach,
+  describe,
+  it,
+  render,
+} from "../test.deps.ts";
 import { DisplayProps } from "../../src/molecules/Display.tsx";
 import { StepsFeatures } from "../../src/organisms/StepsFeatures.tsx";
 import { factory } from "../../mod.ts";
@@ -24,7 +32,7 @@ describe("StepsFeatures Tests", () => {
             children: <p>Step 3 Content</p>,
           },
         ]}
-      </StepsFeatures>
+      </StepsFeatures>,
     );
 
     assert(html.includes("Step 1"));
