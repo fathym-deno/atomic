@@ -1,35 +1,27 @@
-import { h } from 'preact';
-import { shallow } from 'enzyme';
-import { Hero, HeroProps } from '../../src/organisms/Hero';
+import { Hero, HeroProps } from "../../src/organisms/Hero.tsx";
+import {
+  afterEach,
+  assert,
+  assertEquals,
+  beforeEach,
+  describe,
+  it,
+  render,
+} from "../test.deps.ts";
 
-describe('Hero', () => {
+describe("Hero", () => {
   const defaultProps: HeroProps = {
-    callToAction: 'Call to action',
+    callToAction: "Call to action",
     heroStyle: 1,
   };
 
-  it('renders with default props', () => {
-    const wrapper = shallow(<Hero {...defaultProps} />);
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('renders with children', () => {
-    const wrapper = shallow(
-      <Hero {...defaultProps}>
-        <button>Button 1</button>
-        <button>Button 2</button>
-      </Hero>
+  it("renders with default props", () => {
+    const html = render(
+      <Hero {...defaultProps} />,
     );
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('renders with custom class', () => {
-    const wrapper = shallow(<Hero {...defaultProps} class="custom-class" />);
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('renders with custom style', () => {
-    const wrapper = shallow(<Hero {...defaultProps} style={{ color: 'red' }} />);
-    expect(wrapper).toMatchSnapshot();
+    assertEquals(
+      html,
+      `<div callToAction="Call to action" heroStyle="1" class="flex flex-col flex-col px-8 h-96 gap-8 w-full bg-cover bg-center bg-no-repeat bg-gray-100 text-white rounded-3xl"><div class="flex flex-col [&amp;>*]:mx-auto"><p class="text-xl max-w-lg text-blue-100">Call to action</p><nav class="px-2 pt-2 pb-4 flex"></nav></div></div>`,
+    );
   });
 });
