@@ -7,13 +7,8 @@ describe("StepsFeatures Tests", () => {
   describe("Simple", () => {
     const html = render(
       <StepsFeatures
-        steps={[
-          "Step 1",
-          "Step 2",
-          "Step 3",
-        ]}
-        hideDescription={true}
         step={1}
+        hideDescription={true}
       >
         {[
           {
