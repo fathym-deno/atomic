@@ -17,15 +17,16 @@ export function Tabs(props: TabsProps) {
 
   return (
     <div {...rest}>
-      <div className="flex border-b border-gray-200">
+      <div class="flex border-b border-gray-200">
         {tabs.map((tab, index) => (
           <button
             key={index}
-            className={classSet(
+            class={classSet(
+              undefined,
               "py-2 px-4 font-medium text-sm",
               activeTab === index
                 ? "border-b-2 border-blue-500 text-blue-500"
-                : "text-gray-500 hover:text-gray-700"
+                : "text-gray-500 hover:text-gray-700",
             )}
             onClick={() => setActiveTab(index)}
           >
@@ -33,7 +34,7 @@ export function Tabs(props: TabsProps) {
           </button>
         ))}
       </div>
-      <div className="mt-4">{tabs[activeTab].content}</div>
+      <div class="mt-4">{tabs[activeTab].content}</div>
     </div>
   );
 }
