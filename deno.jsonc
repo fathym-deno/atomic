@@ -25,9 +25,7 @@
   "fmt": {
     "include": ["./**/*.ts", "./**/*.tsx"],
     "options": {},
-    "exclude": [
-      "_fresh"
-    ]
+    "exclude": [ ]
   },
   "lint": {
     "include": ["./**/*.ts", "./**/*.tsx"],
@@ -35,12 +33,9 @@
       "include": [],
       "exclude": [],
       "tags": [
-        "fresh",
         "recommended"
       ]
     },
-    "exclude": [
-      "_fresh"
-    ]
+    "exclude": [ ]
   }
 }
