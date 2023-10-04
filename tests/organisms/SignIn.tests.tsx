@@ -15,7 +15,7 @@ describe("SignIn", () => {
     usernamePasswordOptions: {
       usernameInputProps: { id: "username", name: "username" },
       passwordInputProps: { id: "password", name: "password" },
-      actionInputProps: { id: "submit", name: "submit" },
+      submitActionProps: { id: "submit", name: "submit" },
       forgotPasswordActionProps: { id: "forgot", name: "forgot" },
     },
   };

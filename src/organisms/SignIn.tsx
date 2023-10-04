@@ -31,7 +31,10 @@ export function SignIn(props: SignInProps) {
       )}
 
       {usernamePasswordOptions && (
-        <form {...usernamePasswordOptions.formProps} class="flex flex-col space-y-2">
+        <form
+          {...usernamePasswordOptions.formProps}
+          class="flex flex-col space-y-2"
+        >
           <Input {...usernamePasswordOptions.usernameInputProps} />
           <Input {...usernamePasswordOptions.passwordInputProps} />
 

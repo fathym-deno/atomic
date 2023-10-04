@@ -1,18 +1,15 @@
 import { SignUp, SignUpProps } from "../../src/organisms/SignUp.tsx";
-import {
-  afterEach,
-  assert,
-  describe,
-  it,
-  render,
-} from "../test.deps.ts";
+import { afterEach, assert, describe, it, render } from "../test.deps.ts";
 
 describe("SignUp", () => {
   const defaultProps: SignUpProps = {
     signUpOptions: {
       usernameInputProps: { id: "username", name: "username" },
       passwordInputProps: { id: "password", name: "password" },
-      confirmPasswordInputProps: { id: "confirmPassword", name: "confirmPassword" },
+      confirmPasswordInputProps: {
+        id: "confirmPassword",
+        name: "confirmPassword",
+      },
       submitActionProps: { id: "submit", name: "submit" },
     },
   };
