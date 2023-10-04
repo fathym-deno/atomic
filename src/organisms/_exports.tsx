@@ -4,3 +4,4 @@ export * from "./Header.tsx";
 export * from "./Hero.tsx";
 export * from "./StepsFeatures.tsx";
 export * from "./SignIn.tsx";
+export * from "./SignUp.tsx";

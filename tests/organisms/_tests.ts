@@ -4,3 +4,4 @@ import "./Header.tests.tsx";
 import "./Hero.tests.tsx";
 import "./SignIn.tests.tsx";
 import "./StepsFeatures.tests.tsx";
+import "./SignUp.tests.tsx";
