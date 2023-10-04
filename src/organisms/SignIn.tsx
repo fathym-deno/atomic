@@ -30,12 +30,13 @@ export function SignIn(props: SignInProps) {
       )}
 
       {usernamePasswordOptions && (
-        <div class="flex flex-col space-y-2">
+        <form class="flex flex-col space-y-2">
           <Input {...usernamePasswordOptions.usernameInputProps} />
           <Input {...usernamePasswordOptions.passwordInputProps} />
 
           <Action
             {...usernamePasswordOptions.actionInputProps}
+            type="submit"
             actionStyle={ActionStyleTypes.Solid | ActionStyleTypes.Rounded}
           />
 
@@ -43,7 +44,7 @@ export function SignIn(props: SignInProps) {
             {...usernamePasswordOptions.forgotPasswordActionProps}
             actionStyle={ActionStyleTypes.Link}
           />
-        </div>
+        </form>
       )}
     </div>
   );

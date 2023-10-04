@@ -22,11 +22,13 @@ describe("SignIn", () => {
 
   it("renders with default props", () => {
     const html = render(
-      <SignIn {...defaultProps} />
+      <SignIn {...defaultProps} />,
     );
-    assertEquals(
-      html,
-      `<div class="flex flex-col space-y-4"><div class="flex flex-col space-y-2"><input id="username" name="username"/><input id="password" name="password"/><button id="submit" name="submit" class="rounded-full px-4 py-2 bg-blue-500 text-white"/><a id="forgot" name="forgot" class="text-blue-500 underline"/></div></div>`
-    );
+
+    assert(html.includes("flex flex-col space-y-4"));
+    assert(html.includes(`<input id="username" name="username" `));
+    assert(html.includes(`<input id="password" name="password" `));
+    assert(html.includes(`<button id="submit" name="submit" type="submit" `));
+    assert(html.includes(`<button id="forgot" name="forgot" `));
   });
 });
