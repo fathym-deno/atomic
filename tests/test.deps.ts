@@ -8,4 +8,4 @@ export {
   describe,
   it,
 } from "https://deno.land/std@0.203.0/testing/bdd.ts";
-export { render } from "preact-render-to-string";
+export { render } from "https://esm.sh/*preact-render-to-string@6.2.0";
