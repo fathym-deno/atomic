@@ -39,8 +39,8 @@ export function SignIn(props: SignInProps) {
 
           <Input
             placeholder="Password"
-            {...signInOptions.passwordInputProps}
             type="password"
+            {...signInOptions.passwordInputProps}
           />
 
           <div class="flex flex-col md:flex-row md:space-x-2 space-y-2 md:space-y-0 md:items-center">

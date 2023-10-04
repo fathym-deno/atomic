@@ -34,7 +34,7 @@ describe("SignIn", () => {
     );
     assert(
       html.includes(
-        `<input placeholder="Password" id="password" name="password" type="password" `,
+        `<input placeholder="Password" type="password" id="password" name="password" `,
       ),
     );
     assert(html.includes(`<button type="submit"`));
