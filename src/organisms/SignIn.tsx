@@ -35,20 +35,27 @@ export function SignIn(props: SignInProps) {
           {...signInOptions.formProps}
           class="flex flex-col space-y-2"
         >
-          <Input {...signInOptions.usernameInputProps} />
-          <Input {...signInOptions.passwordInputProps} />
+          <Input placeholder="Username" {...signInOptions.usernameInputProps} />
+
+          <Input
+            placeholder="Password"
+            {...signInOptions.passwordInputProps}
+            type="password"
+          />
 
           <div class="flex flex-col md:flex-row md:space-x-2 space-y-2 md:space-y-0 md:items-center">
             <Action
-              {...signInOptions.forgotPasswordActionProps}
               actionStyle={ActionStyleTypes.Link}
-              class="order-2 md:order-1"
+              class={classSet(undefined, "order-2 md:order-1")}
+              children={"Forgot Password"}
+              {...signInOptions.forgotPasswordActionProps}
             />
+
             <Action
-              {...signInOptions.submitActionProps}
               type="submit"
               actionStyle={ActionStyleTypes.Solid | ActionStyleTypes.Rounded}
-              class="order-1 md:order-2"
+              class={classSet(undefined, "order-1 md:order-2")}
+              {...signInOptions.submitActionProps}
             />
           </div>
         </form>

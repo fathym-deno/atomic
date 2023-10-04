@@ -25,10 +25,20 @@ describe("SignIn", () => {
       <SignIn {...defaultProps} />,
     );
 
+    console.log(html);
     assert(html.includes("flex flex-col space-y-4"));
-    assert(html.includes(`<input id="username" name="username" `));
-    assert(html.includes(`<input id="password" name="password" `));
-    assert(html.includes(`<button id="submit" name="submit" type="submit" `));
-    assert(html.includes(`<button id="forgot" name="forgot" `));
+    assert(
+      html.includes(
+        `<input placeholder="Username" id="username" name="username" `,
+      ),
+    );
+    assert(
+      html.includes(
+        `<input placeholder="Password" id="password" name="password" type="password" `,
+      ),
+    );
+    assert(html.includes(`<button type="submit"`));
+    assert(html.includes(`id="submit" name="submit"`));
+    assert(html.includes(`id="forgot" name="forgot"`));
   });
 });
