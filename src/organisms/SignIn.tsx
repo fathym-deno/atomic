@@ -7,8 +7,9 @@ import { classSet } from "../utils/jsx.utils.tsx";
 export type UsernamePasswordOptions = {
   usernameInputProps?: InputProps;
   passwordInputProps?: InputProps;
-  actionInputProps?: ActionProps;
+  submitActionProps?: ActionProps;
   forgotPasswordActionProps?: ActionProps;
+  formProps?: JSX.HTMLAttributes<HTMLFormElement>;
 };
 
 export interface SignInProps extends JSX.HTMLAttributes<HTMLElement> {
@@ -30,20 +31,23 @@ export function SignIn(props: SignInProps) {
       )}
 
       {usernamePasswordOptions && (
-        <form class="flex flex-col space-y-2">
+        <form {...usernamePasswordOptions.formProps} class="flex flex-col space-y-2">
           <Input {...usernamePasswordOptions.usernameInputProps} />
           <Input {...usernamePasswordOptions.passwordInputProps} />
 
-          <Action
-            {...usernamePasswordOptions.actionInputProps}
-            type="submit"
-            actionStyle={ActionStyleTypes.Solid | ActionStyleTypes.Rounded}
-          />
-
-          <Action
-            {...usernamePasswordOptions.forgotPasswordActionProps}
-            actionStyle={ActionStyleTypes.Link}
-          />
+          <div class="flex flex-col md:flex-row md:space-x-2 space-y-2 md:space-y-0 md:items-center">
+            <Action
+              {...usernamePasswordOptions.forgotPasswordActionProps}
+              actionStyle={ActionStyleTypes.Link}
+              class="order-2 md:order-1"
+            />
+            <Action
+              {...usernamePasswordOptions.submitActionProps}
+              type="submit"
+              actionStyle={ActionStyleTypes.Solid | ActionStyleTypes.Rounded}
+              class="order-1 md:order-2"
+            />
+          </div>
         </form>
       )}
     </div>
