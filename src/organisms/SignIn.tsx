@@ -4,7 +4,7 @@ import { Input, InputProps } from "../atoms/forms/Input.tsx";
 import { ActionGroup } from "../molecules/ActionGroup.tsx";
 import { classSet } from "../utils/jsx.utils.tsx";
 
-export type UsernamePasswordOptions = {
+export type SignInOptions = {
   usernameInputProps?: InputProps;
   passwordInputProps?: InputProps;
   submitActionProps?: ActionProps;
@@ -14,11 +14,11 @@ export type UsernamePasswordOptions = {
 
 export interface SignInProps extends JSX.HTMLAttributes<HTMLElement> {
   oauthProviders?: Array<ActionProps>;
-  usernamePasswordOptions?: UsernamePasswordOptions;
+  signInOptions?: SignInOptions;
 }
 
 export function SignIn(props: SignInProps) {
-  const { oauthProviders, usernamePasswordOptions } = props;
+  const { oauthProviders, signInOptions } = props;
 
   return (
     <div class={classSet(props, "flex flex-col space-y-4")}>
@@ -30,22 +30,22 @@ export function SignIn(props: SignInProps) {
         </ActionGroup>
       )}
 
-      {usernamePasswordOptions && (
+      {signInOptions && (
         <form
-          {...usernamePasswordOptions.formProps}
+          {...signInOptions.formProps}
           class="flex flex-col space-y-2"
         >
-          <Input {...usernamePasswordOptions.usernameInputProps} />
-          <Input {...usernamePasswordOptions.passwordInputProps} />
+          <Input {...signInOptions.usernameInputProps} />
+          <Input {...signInOptions.passwordInputProps} />
 
           <div class="flex flex-col md:flex-row md:space-x-2 space-y-2 md:space-y-0 md:items-center">
             <Action
-              {...usernamePasswordOptions.forgotPasswordActionProps}
+              {...signInOptions.forgotPasswordActionProps}
               actionStyle={ActionStyleTypes.Link}
               class="order-2 md:order-1"
             />
             <Action
-              {...usernamePasswordOptions.submitActionProps}
+              {...signInOptions.submitActionProps}
               type="submit"
               actionStyle={ActionStyleTypes.Solid | ActionStyleTypes.Rounded}
               class="order-1 md:order-2"

@@ -12,7 +12,7 @@ import {
 describe("SignIn", () => {
   const defaultProps: SignInProps = {
     oauthProviders: [],
-    usernamePasswordOptions: {
+    signInOptions: {
       usernameInputProps: { id: "username", name: "username" },
       passwordInputProps: { id: "password", name: "password" },
       submitActionProps: { id: "submit", name: "submit" },
