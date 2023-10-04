@@ -23,7 +23,7 @@ export function SignIn(props: SignInProps) {
   return (
     <div class={classSet(props, "flex flex-col space-y-4")}>
       {oauthProviders && (
-        <ActionGroup>
+        <ActionGroup class="flex flex-col space-y-2">
           {oauthProviders.map((provider, index) => (
             <Action key={index} {...provider} />
           ))}
