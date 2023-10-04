@@ -55,6 +55,7 @@ export function SignIn(props: SignInProps) {
               type="submit"
               actionStyle={ActionStyleTypes.Solid | ActionStyleTypes.Rounded}
               class={classSet(undefined, "order-1 md:order-2")}
+              children={"Submit"}
               {...signInOptions.submitActionProps}
             />
           </div>
