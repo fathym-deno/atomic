@@ -23,9 +23,23 @@ export function SignUp(props: SignUpProps) {
     <div class={classSet(props, "flex flex-col space-y-4")}>
       {signUpOptions && (
         <form {...signUpOptions.formProps} class="flex flex-col space-y-2">
-          <Input {...signUpOptions.usernameInputProps} />
-          <Input {...signUpOptions.passwordInputProps} />
-          <Input {...signUpOptions.confirmPasswordInputProps} />
+          <Input
+            placeholder="Username"
+            name="Username"
+            {...signUpOptions.usernameInputProps}
+          />
+          <Input
+            placeholder="Password"
+            type="password"
+            name="password"
+            {...signUpOptions.passwordInputProps}
+          />
+          <Input
+            placeholder="Confirm Password"
+            type="password"
+            name="confirmPassword"
+            {...signUpOptions.confirmPasswordInputProps}
+          />
 
           <Action
             {...signUpOptions.submitActionProps}

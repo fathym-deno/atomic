@@ -4,12 +4,6 @@ import { afterEach, assert, describe, it, render } from "../test.deps.ts";
 describe("SignUp", () => {
   const defaultProps: SignUpProps = {
     signUpOptions: {
-      usernameInputProps: { id: "username", name: "username" },
-      passwordInputProps: { id: "password", name: "password" },
-      confirmPasswordInputProps: {
-        id: "confirmPassword",
-        name: "confirmPassword",
-      },
       submitActionProps: { id: "submit", name: "submit" },
     },
   };
@@ -20,9 +14,21 @@ describe("SignUp", () => {
     );
 
     assert(html.includes("flex flex-col space-y-4"));
-    assert(html.includes(`<input id="username" name="username"`));
-    assert(html.includes(`<input id="password" name="password"`));
-    assert(html.includes(`<input id="confirmPassword" name="confirmPassword"`));
+    assert(
+      html.includes(
+        `<input placeholder="Username" name="Username" type="text" `,
+      ),
+    );
+    assert(
+      html.includes(
+        `<input placeholder="Password" type="password" name="password"`,
+      ),
+    );
+    assert(
+      html.includes(
+        `<input placeholder="Confirm Password" type="password" name="confirmPassword"`,
+      ),
+    );
     assert(html.includes(`<button id="submit" name="submit" type="submit"`));
   });
 });

@@ -35,11 +35,16 @@ export function SignIn(props: SignInProps) {
           {...signInOptions.formProps}
           class="flex flex-col space-y-2"
         >
-          <Input placeholder="Username" {...signInOptions.usernameInputProps} />
+          <Input
+            placeholder="Username"
+            name="Username"
+            {...signInOptions.usernameInputProps}
+          />
 
           <Input
             placeholder="Password"
             type="password"
+            name="password"
             {...signInOptions.passwordInputProps}
           />
 

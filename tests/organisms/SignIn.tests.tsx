@@ -13,8 +13,6 @@ describe("SignIn", () => {
   const defaultProps: SignInProps = {
     oauthProviders: [],
     signInOptions: {
-      usernameInputProps: { id: "username", name: "username" },
-      passwordInputProps: { id: "password", name: "password" },
       submitActionProps: { id: "submit", name: "submit" },
       forgotPasswordActionProps: { id: "forgot", name: "forgot" },
     },
@@ -25,16 +23,15 @@ describe("SignIn", () => {
       <SignIn {...defaultProps} />,
     );
 
-    console.log(html);
     assert(html.includes("flex flex-col space-y-4"));
     assert(
       html.includes(
-        `<input placeholder="Username" id="username" name="username" `,
+        `<input placeholder="Username" name="Username" type="text" `,
       ),
     );
     assert(
       html.includes(
-        `<input placeholder="Password" type="password" id="password" name="password" `,
+        `<input placeholder="Password" type="password" name="password" `,
       ),
     );
     assert(html.includes(`<button type="submit"`));
