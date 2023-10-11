@@ -11,8 +11,8 @@
   },
   "imports": {
     "$dnt": "https://deno.land/x/dnt/mod.ts",
-    "preact": "https://esm.sh/preact@10.16.0",
-    "preact/": "https://esm.sh/preact@10.16.0/"
+    "preact": "https://esm.sh/preact@10.18.1",
+    "preact/": "https://esm.sh/preact@10.18.1/"
   },
   "compilerOptions": {
     "jsx": "react-jsx",
