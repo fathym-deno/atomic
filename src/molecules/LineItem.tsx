@@ -6,7 +6,7 @@ export type LineItemProps = Omit<JSX.HTMLAttributes<HTMLDivElement>, "icon"> & {
 
   actionText: ComponentChildren;
 
-  confirmAction?: () => void;
+  confirmAction?: () => Promise<void>;
 
   confirmIcon?: ComponentChildren;
 
