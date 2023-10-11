@@ -6,17 +6,17 @@ export type SlideToggleProps = JSX.HTMLAttributes<HTMLInputElement> & {
 };
 
 export function SlideToggle(props: SlideToggleProps) {
-  const { checked, value, ...rest } = props;
+  // const { checked, value, ...rest } = props;
 
-  const [checkedState, setCheckedState] = useState(checked);
+  // const [checkedState, setCheckedState] = useState(checked);
 
+  //       // onChange={() => setCheckedState(!checked)}
+  //       // value={value}
+  //       // checked={checkedState}
   return (
     <label className="relative inline-flex items-center cursor-pointer">
       <input
-        onChange={() => setCheckedState(!checked)}
-        {...rest}
-        value={value}
-        checked={checkedState}
+        {...props}
         type="checkbox"
         class="sr-only peer"
       />

@@ -8,43 +8,44 @@ export type InputProps =
   )
   & {
     multiline?: boolean;
-
-    prepareValue?: (value: string) => string;
+    // prepareValue?: (value: string) => string;
   };
 
 export function Input(props: InputProps) {
-  const { prepareValue, value, ...rest } = props;
+  // const { prepareValue, value, ...rest } = props;
 
-  const [valueState, setValue] = useState(value);
+  // const [valueState, setValue] = useState(value);
 
-  const onValueChange = (value: string) => {
-    if (prepareValue) {
-      value = prepareValue(value);
-    }
+  // const onValueChange = (value: string) => {
+  //   if (prepareValue) {
+  //     value = prepareValue(value);
+  //   }
 
-    setValue(value);
-  };
+  //   setValue(value);
+  // };
 
-  const onTextAreaChange = (
-    e: JSX.TargetedEvent<HTMLTextAreaElement, Event>,
-  ) => {
-    const target = (e.target as HTMLTextAreaElement)!;
+  // const onTextAreaChange = (
+  //   e: JSX.TargetedEvent<HTMLTextAreaElement, Event>,
+  // ) => {
+  //   const target = (e.target as HTMLTextAreaElement)!;
 
-    onValueChange(target.value);
-  };
+  //   onValueChange(target.value);
+  // };
 
-  const onInputChange = (e: JSX.TargetedEvent<HTMLInputElement, Event>) => {
-    const target = (e.target as HTMLInputElement)!;
+  // const onInputChange = (e: JSX.TargetedEvent<HTMLInputElement, Event>) => {
+  //   const target = (e.target as HTMLInputElement)!;
 
-    onValueChange(target.value);
-  };
+  //   onValueChange(target.value);
+  // };
 
+  // onChange={onTextAreaChange}
+  // value={valueState}
+  // onChange={onInputChange}
+  // value={valueState}
   const input = props.multiline
     ? (
       <textarea
-        onChange={onTextAreaChange}
-        {...(rest as JSX.HTMLAttributes<HTMLTextAreaElement>)}
-        value={valueState}
+        {...(props as JSX.HTMLAttributes<HTMLTextAreaElement>)}
         class={classSet(
           props,
           "w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500",
@@ -54,9 +55,7 @@ export function Input(props: InputProps) {
     )
     : (
       <input
-        onChange={onInputChange}
-        {...(rest as JSX.HTMLAttributes<HTMLInputElement>)}
-        value={valueState}
+        {...(props as JSX.HTMLAttributes<HTMLInputElement>)}
         type={props.type || "text"}
         class={classSet(
           props,
