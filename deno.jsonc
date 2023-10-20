@@ -11,8 +11,13 @@
   },
   "imports": {
     "$dnt": "https://deno.land/x/dnt/mod.ts",
+    "flowbite": "https://esm.sh/flowbite@1.8.1?external=react,react-dom,react%2Fjsx-runtime",
+    "flowbite-react": "https://esm.sh/flowbite-react@0.6.4?external=react,react-dom,react%2Fjsx-runtime",
     "preact": "https://esm.sh/preact@10.18.1",
-    "preact/": "https://esm.sh/preact@10.18.1/"
+    "preact/": "https://esm.sh/preact@10.18.1/",
+    "react": "https://esm.sh/preact/compat",
+    "react-dom": "https://esm.sh/preact/compat",
+    "react/jsx-runtime": "https://esm.sh/preact/jsx-runtime"
   },
   "compilerOptions": {
     "jsx": "react-jsx",
