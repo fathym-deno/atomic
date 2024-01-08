@@ -18,7 +18,7 @@ export function Features(props: FeaturesProps) {
       {...props}
       class={classSet(
         props,
-        "flex flex-col justify-center",
+        "flex flex-row md:flex-col justify-center",
       )}
     >
       <div
