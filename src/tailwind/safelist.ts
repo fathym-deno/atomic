@@ -1,4 +1,4 @@
-export const safelist = [
+export const safelist = new Set([
   'font-bold',
   'text-3xl',
   'md:text-4xl',
@@ -38,4 +38,4 @@ export const safelist = [
   'p-4',
   'm-4',
   'sm:(p-1 m-1)',
-];
+]);
