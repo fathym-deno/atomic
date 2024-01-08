@@ -18,13 +18,13 @@ export function Features(props: FeaturesProps) {
       {...props}
       class={classSet(
         props,
-        "flex flex-row md:flex-col justify-center",
+        "flex flex-col justify-center",
       )}
     >
       <div
         class={classSet(
           props,
-          "flex flex-col gap-8 justify-center md:(flex-row gap-16) [&>*]:(flex-grow basis-0)",
+          "flex flex-row md:flex-col gap-8 justify-center md:(flex-row gap-16) [&>*]:(flex-grow basis-0)",
         )}
       >
         {displayElement}
