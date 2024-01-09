@@ -97,7 +97,7 @@ export function StepsFeatures(props: StepsFeaturesProps) {
           title: title,
           class: classSet(
             undefined,
-            "shadow-lg p-4 m-4 justify-start sm:(p-1 m-1)",
+            "shadow-lg p-4 m-4 justify-start sm:p-1 sm:m-1",
             childStep.class,
           ),
           displayStyle: DisplayStyleTypes.Center,

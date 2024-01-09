@@ -58,7 +58,7 @@ export function Action(
           : "border-none",
         (actionStyle & ActionStyleTypes.Link) ===
             ActionStyleTypes.Link
-          ? "hover:(bg-blue-700 bg-opacity-80 text-white)"
+          ? "hover:bg-blue-700 hover:bg-opacity-80 hover:text-white"
           : "",
       )}
     >

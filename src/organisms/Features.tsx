@@ -24,7 +24,7 @@ export function Features(props: FeaturesProps) {
       <div
         class={classSet(
           props,
-          "flex flex-col md:flex-row gap-8 justify-center md:(flex-row gap-16) [&>*]:(flex-grow basis-0)",
+          "flex flex-col md:flex-row gap-8 justify-center md:flex-row md:gap-16 [&>*]:flex-grow [&>*]:basis-0",
         )}
       >
         {displayElement}
