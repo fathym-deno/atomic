@@ -1,5 +1,5 @@
 import { ComponentChildren, JSX, useState } from "../../src.deps.ts";
-import { classSet } from "../../utils/jsx.utils.tsx";
+import { classSet } from "../../utils/jsx.utils.ts";
 
 export type SlideToggleProps = JSX.HTMLAttributes<HTMLInputElement> & {
   children?: ComponentChildren;

@@ -1,5 +1,5 @@
 import { ComponentChildren, JSX } from "../src.deps.ts";
-import { classSet } from "../utils/jsx.utils.tsx";
+import { classSet } from "../utils/jsx.utils.ts";
 import { DisplayProps, useDisplayChildren } from "../molecules/Display.tsx";
 import { ActionProps, useActionChildren } from "../atoms/Action.tsx";
 import { ActionGroup } from "../molecules/ActionGroup.tsx";
@@ -24,7 +24,7 @@ export function Features(props: FeaturesProps) {
       <div
         class={classSet(
           props,
-          "flex flex-row md:flex-col gap-8 justify-center md:(flex-row gap-16) [&>*]:(flex-grow basis-0)",
+          "flex flex-col md:flex-row gap-8 justify-center md:(flex-row gap-16) [&>*]:(flex-grow basis-0)",
         )}
       >
         {displayElement}

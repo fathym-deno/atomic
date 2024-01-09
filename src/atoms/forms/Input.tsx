@@ -1,5 +1,5 @@
 import { ComponentChildren, type JSX, useState } from "../../src.deps.ts";
-import { classSet } from "../../utils/jsx.utils.tsx";
+import { classSet } from "../../utils/jsx.utils.ts";
 
 export type InputProps =
   & (

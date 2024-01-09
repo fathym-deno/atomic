@@ -1,5 +1,5 @@
 import { ComponentChildren } from "../src.deps.ts";
-import { classSet } from "../utils/jsx.utils.tsx";
+import { classSet } from "../utils/jsx.utils.ts";
 import { Features, FeaturesProps } from "./Features.tsx";
 import { DisplayStyleTypes } from "../molecules/Display.tsx";
 

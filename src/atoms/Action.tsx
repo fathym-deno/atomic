@@ -1,5 +1,5 @@
 import { ComponentChildren, JSX } from "../src.deps.ts";
-import { classSet } from "../utils/jsx.utils.tsx";
+import { classSet } from "../utils/jsx.utils.ts";
 
 export enum ActionStyleTypes {
   Solid = 1 << 0,
