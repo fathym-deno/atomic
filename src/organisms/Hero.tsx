@@ -32,7 +32,7 @@ export function Hero(props: HeroProps) {
       {...props}
       class={classSet(
         props,
-        "flex-col px-8 pt-4 pb-2 gap-8",
+        "px-8 py-4 gap-8",
         (heroStyle & HeroStyleTypes.Inset) ===
             HeroStyleTypes.Inset
           ? "w-[80%] my-8 mx-auto md:w-[90%] md:my-6 sm:w-[95%] sm:my-4 xs:w-[98%] xs:max-w-[98%] xs:my-2"
