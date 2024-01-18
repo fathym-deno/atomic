@@ -21,7 +21,7 @@ describe("Hero", () => {
     );
     assertEquals(
       html,
-      `<div callToAction="Call to action" heroStyle="1" class="flex flex-col px-8 py-4 gap-8 w-full bg-cover bg-center bg-no-repeat bg-gray-100 text-white rounded-3xl"><div class="flex flex-col [&amp;>*]:mx-auto"><p class="text-xl max-w-lg text-blue-100">Call to action</p><nav class="px-2 pt-2 pb-4 flex"></nav></div></div>`,
+      `<div callToAction="Call to action" heroStyle="1" class="flex flex-col p-8 gap-8 w-full bg-cover bg-center bg-no-repeat bg-gray-100 text-white rounded-3xl"><div class="flex flex-col [&amp;>*]:mx-auto"><p class="text-xl max-w-lg text-blue-100">Call to action</p><nav class="px-2 pt-2 pb-4 flex"></nav></div></div>`,
     );
   });
 });
