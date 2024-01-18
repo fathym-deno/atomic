@@ -7,7 +7,7 @@ export function classSet(
   },
   ...set: Array<string | undefined>
 ): string {
-  return [...set, props?.class || props?.className].filter((c) => c).join(" ");
+  return [props?.class || props?.className, ...set].filter((c) => c).join(" ");
 }
 
 // deno-lint-ignore no-explicit-any
