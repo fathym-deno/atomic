@@ -12,11 +12,15 @@ import { Action, ActionStyleTypes } from "../../src/atoms/Action.tsx";
 
 describe("Action Tests", () => {
   describe("Anchor Exists", () => {
-    const html = render(<Action href="/" class="w-32">Hello</Action>);
+    const html = render(
+      <Action href="/" class="w-32">
+        Hello
+      </Action>,
+    );
 
     assertEquals(
       html,
-      `<a href="/" class="w-32 block px-4 py-2 font-bold transition-colors duration-200 ease-out rounded bg-blue-500 text-white border-none hover:bg-blue-700 hover:bg-opacity-80 hover:text-white">Hello</a>`,
+      `<a href="/" class="w-32 block font-bold transition-colors duration-200 ease-out px-4 py-2 rounded bg-blue-500 text-white border-none hover:bg-blue-700 hover:bg-opacity-80 hover:text-white">Hello</a>`,
     );
   });
 
@@ -25,7 +29,7 @@ describe("Action Tests", () => {
 
     assertEquals(
       html,
-      `<button disabled class="block px-4 py-2 font-bold transition-colors duration-200 ease-out rounded bg-blue-500 text-white border-none hover:bg-blue-700 hover:bg-opacity-80 hover:text-white">Hello</button>`,
+      `<button disabled class="block font-bold transition-colors duration-200 ease-out px-4 py-2 rounded bg-blue-500 text-white border-none hover:bg-blue-700 hover:bg-opacity-80 hover:text-white">Hello</button>`,
     );
   });
 
@@ -34,7 +38,7 @@ describe("Action Tests", () => {
 
     assertEquals(
       html,
-      `<button class="px-0 py-0 block px-4 py-2 font-bold transition-colors duration-200 ease-out rounded bg-blue-500 text-white border-none hover:bg-blue-700 hover:bg-opacity-80 hover:text-white">Hello</button>`,
+      `<button class="px-0 py-0 block font-bold transition-colors duration-200 ease-out px-4 py-2 rounded bg-blue-500 text-white border-none hover:bg-blue-700 hover:bg-opacity-80 hover:text-white">Hello</button>`,
     );
   });
 
@@ -45,7 +49,7 @@ describe("Action Tests", () => {
 
     assertEquals(
       html,
-      `<button actionStyle="16" class="block px-4 py-2 font-bold transition-colors duration-200 ease-out text-black border-none">Hello</button>`,
+      `<button actionStyle="32" class="block font-bold transition-colors duration-200 ease-out px-4 py-2 text-black border-none">Hello</button>`,
     );
   });
 });

@@ -6,8 +6,9 @@ export enum ActionStyleTypes {
   Outline = 1 << 1,
   Link = 1 << 2,
   Rounded = 1 << 3,
-  None = 1 << 4,
-  All = ~0 << 5,
+  Icon = 1 << 4,
+  None = 1 << 5,
+  All = ~0 << 6,
 }
 
 export function useActionChildren(
@@ -43,8 +44,12 @@ export function Action(
     <div
       class={classSet(
         props,
-        "block px-4 py-2 font-bold",
+        "block font-bold",
         "transition-colors duration-200 ease-out",
+        (actionStyle & ActionStyleTypes.Icon) ===
+            ActionStyleTypes.Icon
+          ? "px-1 py-1"
+          : "px-4 py-2",
         (actionStyle & ActionStyleTypes.Rounded) ===
             ActionStyleTypes.Rounded
           ? "rounded"
