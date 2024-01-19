@@ -49,7 +49,7 @@ describe("Action Tests", () => {
 
     assertEquals(
       html,
-      `<button actionStyle="32" class="block font-bold transition-colors duration-200 ease-out px-4 py-2 text-black border-none">Hello</button>`,
+      `<button actionStyle="32" class="block font-bold transition-colors duration-200 ease-out px-4 py-2 text-black dark:text-white border-none">Hello</button>`,
     );
   });
 });
