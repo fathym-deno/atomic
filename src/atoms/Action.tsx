@@ -48,7 +48,7 @@ export function Action(
         "transition-colors duration-200 ease-out",
         (actionStyle & ActionStyleTypes.Icon) ===
             ActionStyleTypes.Icon
-          ? "px-1 py-1"
+          ? "px-1 py-1 hover:text-blue-700 hover:text-opacity-80"
           : "px-4 py-2",
         (actionStyle & ActionStyleTypes.Rounded) ===
             ActionStyleTypes.Rounded
@@ -62,6 +62,7 @@ export function Action(
           ? "text-blue-700 border-blue-700 border-solid border hover:border-blue-900"
           : "border-none",
         (actionStyle & ActionStyleTypes.Link) ===
+            ActionStyleTypes.Link && (actionStyle & ActionStyleTypes.Icon) !==
             ActionStyleTypes.Link
           ? "hover:bg-blue-700 hover:bg-opacity-80 hover:text-white"
           : "",
