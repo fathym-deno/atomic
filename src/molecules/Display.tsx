@@ -24,14 +24,16 @@ export function useDisplayChildren(
 } {
   const display = Array.isArray(children) //&& children.every(item => item instanceof DisplayProps)
     ? undefined
-    : children as ComponentChildren;
+    : (children as ComponentChildren);
 
   const displayDetails = Array.isArray(children) //&& children.every(item => item instanceof DisplayProps)
-    ? children as Array<DisplayProps>
+    ? (children as Array<DisplayProps>)
     : undefined;
 
   const displayElement = display || (
-    <>{displayDetails?.map((dd) => <Display {...dd} />)}</>
+    <>
+      {displayDetails?.map((dd) => <Display {...dd} />)}
+    </>
   );
 
   return { display, displayDetails, displayElement };
@@ -43,38 +45,38 @@ export function Display(props: DisplayProps) {
   const displayTitle = typeof props.title === "string"
     ? (
       <h1
-        class={classSet(
-          undefined,
+        class={classSet([
           "font-bold",
-          (displayStyle & DisplayStyleTypes.Large) ===
-              DisplayStyleTypes.Large
+          (displayStyle & DisplayStyleTypes.Large) === DisplayStyleTypes.Large
             ? "text-3xl md:text-4xl inline-block"
             : "text-2xl md:text-3xl inline-block",
-        )}
+        ])}
       >
         {props.title}
       </h1>
     )
-    : props.title as ComponentChildren;
+    : (
+      props.title as ComponentChildren
+    );
 
   return (
     <div
       {...props}
       class={classSet(
+        [
+          "flex flex-col",
+          (displayStyle & DisplayStyleTypes.Center) === DisplayStyleTypes.Center
+            ? "justify-center items-center"
+            : undefined,
+          (displayStyle & DisplayStyleTypes.Top) === DisplayStyleTypes.Top
+            ? "justify-start items-start"
+            : undefined,
+          (displayStyle & DisplayStyleTypes.Bottom) === DisplayStyleTypes.Bottom
+            ? "justify-end items-end"
+            : undefined,
+        ],
         props,
-        "flex flex-col",
-        (displayStyle & DisplayStyleTypes.Center) ===
-            DisplayStyleTypes.Center
-          ? "justify-center items-center"
-          : undefined,
-        (displayStyle & DisplayStyleTypes.Top) ===
-            DisplayStyleTypes.Top
-          ? "justify-start items-start"
-          : undefined,
-        (displayStyle & DisplayStyleTypes.Bottom) ===
-            DisplayStyleTypes.Bottom
-          ? "justify-end items-end"
-          : undefined,
+        "-:",
       )}
     >
       {displayTitle}

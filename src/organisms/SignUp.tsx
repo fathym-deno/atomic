@@ -20,7 +20,7 @@ export function SignUp(props: SignUpProps) {
   const { signUpOptions } = props;
 
   return (
-    <div class={classSet(props, "flex flex-col space-y-4")}>
+    <div class={classSet(["flex flex-col space-y-4"], props, "-:")}>
       {signUpOptions && (
         <form {...signUpOptions.formProps} class="flex flex-col space-y-2">
           <Input

@@ -38,10 +38,7 @@ export function MenuButton(props: MenuButtonProps) {
     window.document.addEventListener("click", eventHandler);
 
     return () => {
-      window.document.removeEventListener(
-        "click",
-        eventHandler,
-      );
+      window.document.removeEventListener("click", eventHandler);
     };
   };
 
@@ -49,7 +46,7 @@ export function MenuButton(props: MenuButtonProps) {
 
   return (
     <>
-      <div class={classSet(props, "menu-wrapper relative")}>
+      <div class={classSet(["menu-wrapper relative"], props, "-:")}>
         <Action
           onClick={() => setShowMenu(!showMenu)}
           class="flex items-center p-2 rounded"
@@ -59,8 +56,7 @@ export function MenuButton(props: MenuButtonProps) {
 
         {showMenu && (
           <div
-            class={classSet(
-              undefined,
+            class={classSet([
               "bg-white shadow-md",
               props.menuStyle === MenuButtonStyleTypes.Popover
                 ? "absolute right-0 mt-2"
@@ -71,7 +67,7 @@ export function MenuButton(props: MenuButtonProps) {
               props.menuStyle === MenuButtonStyleTypes.Responsive
                 ? "fixed top-0 bottom-0 left-0 z-50 w-[80%] md:absolute md:right-0 md:mt-2 md:top-auto md:bottom-auto md:left-auto md:w-auto"
                 : undefined,
-            )}
+            ])}
           >
             {nav || (
               <ul class="divide-y divide-gray-200">

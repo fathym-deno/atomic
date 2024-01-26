@@ -1,4 +1,4 @@
-import { ComponentChildren, JSX } from "../src.deps.ts";
+import { ComponentChildren, isValidElement, JSX, VNode } from "../src.deps.ts";
 import { classSet } from "../utils/jsx.utils.ts";
 
 export enum ActionStyleTypes {
@@ -40,25 +40,28 @@ export function Action(props: ActionProps) {
   const shared = (
     <div
       class={classSet(
+        [
+          "block font-bold",
+          "transition-colors duration-200 ease-out",
+          (actionStyle & ActionStyleTypes.Icon) === ActionStyleTypes.Icon
+            ? "px-1 py-1 hover:text-blue-700 hover:text-opacity-80"
+            : "px-4 py-2",
+          (actionStyle & ActionStyleTypes.Rounded) === ActionStyleTypes.Rounded
+            ? "rounded"
+            : "",
+          (actionStyle & ActionStyleTypes.Solid) === ActionStyleTypes.Solid
+            ? "bg-blue-500 text-white"
+            : "text-black dark:text-white",
+          (actionStyle & ActionStyleTypes.Outline) === ActionStyleTypes.Outline
+            ? "text-blue-700 border-blue-700 border-solid border hover:border-blue-900"
+            : "border-none",
+          (actionStyle & ActionStyleTypes.Link) === ActionStyleTypes.Link &&
+            (actionStyle & ActionStyleTypes.Icon) !== ActionStyleTypes.Link
+            ? "hover:bg-blue-700 hover:bg-opacity-80 hover:text-white"
+            : "",
+        ],
         props,
-        "block font-bold",
-        "transition-colors duration-200 ease-out",
-        (actionStyle & ActionStyleTypes.Icon) === ActionStyleTypes.Icon
-          ? "px-1 py-1 hover:text-blue-700 hover:text-opacity-80"
-          : "px-4 py-2",
-        (actionStyle & ActionStyleTypes.Rounded) === ActionStyleTypes.Rounded
-          ? "rounded"
-          : "",
-        (actionStyle & ActionStyleTypes.Solid) === ActionStyleTypes.Solid
-          ? "bg-blue-500 text-white"
-          : "text-black dark:text-white",
-        (actionStyle & ActionStyleTypes.Outline) === ActionStyleTypes.Outline
-          ? "text-blue-700 border-blue-700 border-solid border hover:border-blue-900"
-          : "border-none",
-        (actionStyle & ActionStyleTypes.Link) === ActionStyleTypes.Link &&
-          (actionStyle & ActionStyleTypes.Icon) !== ActionStyleTypes.Link
-          ? "hover:bg-blue-700 hover:bg-opacity-80 hover:text-white"
-          : "",
+        "-:",
       )}
     >
     </div>

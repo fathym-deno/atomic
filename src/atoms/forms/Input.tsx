@@ -47,8 +47,11 @@ export function Input(props: InputProps) {
       <textarea
         {...(props as JSX.HTMLAttributes<HTMLTextAreaElement>)}
         class={classSet(
+          [
+            "w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500",
+          ],
           props,
-          "w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500",
+          "-:",
         )}
       >
       </textarea>
@@ -58,8 +61,11 @@ export function Input(props: InputProps) {
         {...(props as JSX.HTMLAttributes<HTMLInputElement>)}
         type={props.type || "text"}
         class={classSet(
+          [
+            "px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500",
+          ],
           props,
-          "px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500",
+          "-:",
         )}
       />
     );

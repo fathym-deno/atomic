@@ -21,7 +21,7 @@ export function SignIn(props: SignInProps) {
   const { oauthProviders, signInOptions } = props;
 
   return (
-    <div class={classSet(props, "flex flex-col space-y-4")}>
+    <div class={classSet(["flex flex-col space-y-4"], props, "-:")}>
       {oauthProviders && (
         <ActionGroup class="flex flex-col space-y-2">
           {oauthProviders.map((provider, index) => (
@@ -31,10 +31,7 @@ export function SignIn(props: SignInProps) {
       )}
 
       {signInOptions && (
-        <form
-          {...signInOptions.formProps}
-          class="flex flex-col space-y-2"
-        >
+        <form {...signInOptions.formProps} class="flex flex-col space-y-2">
           <Input
             placeholder="Username"
             name="Username"
@@ -51,7 +48,7 @@ export function SignIn(props: SignInProps) {
           <div class="flex flex-col md:flex-row md:space-x-2 space-y-2 md:space-y-0 md:items-center">
             <Action
               actionStyle={ActionStyleTypes.Link}
-              class={classSet(undefined, "order-2 md:order-1")}
+              class="order-2 md:order-1"
               children={"Forgot Password"}
               {...signInOptions.forgotPasswordActionProps}
             />
@@ -59,7 +56,7 @@ export function SignIn(props: SignInProps) {
             <Action
               type="submit"
               actionStyle={ActionStyleTypes.Solid | ActionStyleTypes.Rounded}
-              class={classSet(undefined, "order-1 md:order-2")}
+              class="order-1 md:order-2"
               children={"Submit"}
               {...signInOptions.submitActionProps}
             />

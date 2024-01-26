@@ -27,9 +27,9 @@ export function useHeaderLogoChildren(
 } {
   const isHeaderLogo = !!(children as HeaderLogo)?.LogoUrl;
 
-  const logo = isHeaderLogo ? undefined : children as ComponentChildren;
+  const logo = isHeaderLogo ? undefined : (children as ComponentChildren);
 
-  const logoDetails = isHeaderLogo ? children as HeaderLogo : undefined;
+  const logoDetails = isHeaderLogo ? (children as HeaderLogo) : undefined;
 
   const logoAction = (
     <Action
@@ -59,18 +59,11 @@ export function Header(props: HeaderProps) {
   return (
     <header
       {...props}
-      class={classSet(
-        props,
-        "flex items-center justify-between",
-      )}
+      class={classSet(["flex items-center justify-between"], props, "-:")}
     >
-      <div class="px-4 py-3 sm:p-0">
-        {logo || logoAction}
-      </div>
+      <div class="px-4 py-3 sm:p-0">{logo || logoAction}</div>
 
-      <ActionGroup>
-        {props.nav}
-      </ActionGroup>
+      <ActionGroup>{props.nav}</ActionGroup>
     </header>
   );
 }

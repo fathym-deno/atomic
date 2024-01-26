@@ -23,7 +23,7 @@ describe("SignIn", () => {
       <SignIn {...defaultProps} />,
     );
 
-    assert(html.includes("flex flex-col space-y-4"));
+    assert(html.includes("-:flex -:flex-col -:space-y-4"));
     assert(
       html.includes(
         `<input placeholder="Username" name="Username" type="text" `,

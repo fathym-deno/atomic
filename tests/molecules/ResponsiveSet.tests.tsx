@@ -9,6 +9,7 @@ import {
 } from "../test.deps.ts";
 
 import { ResponsiveSet } from "../../src/molecules/ResponsiveSet.tsx";
+import { prefixClasses } from "../../src/utils/jsx.utils.ts";
 
 describe("ResponsiveSet Tests", () => {
   it("Renders responsive set element with provided props", () => {
@@ -17,9 +18,17 @@ describe("ResponsiveSet Tests", () => {
         <p>Content goes here</p>
       </ResponsiveSet>,
     );
+
+    const rootCss = prefixClasses("-:", "menu-wrapper relative");
+
+    const toggleCss = prefixClasses(
+      "-:",
+      "block font-bold transition-colors duration-200 ease-out px-4 py-2 rounded bg-blue-500 text-white border-none hover:bg-blue-700 hover:bg-opacity-80 hover:text-white",
+    );
+
     assertEquals(
       html,
-      `<div class="md:hidden menu-wrapper relative"><button class="flex items-center p-2 rounded block font-bold transition-colors duration-200 ease-out px-4 py-2 rounded bg-blue-500 text-white border-none hover:bg-blue-700 hover:bg-opacity-80 hover:text-white">Toggle</button></div><span toggleChildren="Toggle" class="hidden md:flex"><p>Content goes here</p></span>`,
+      `<div class="${rootCss} md:hidden"><button class="${toggleCss} flex items-center p-2 rounded">Toggle</button></div><span toggleChildren="Toggle" class="-:hidden -:md:flex"><p>Content goes here</p></span>`,
     );
   });
 });

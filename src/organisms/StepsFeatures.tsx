@@ -11,28 +11,26 @@ export function buildTitle(
 ): ComponentChildren {
   const textGradient = (
     <div
-      class={classSet(
-        undefined,
+      class={classSet([
         complete
           ? "bg-gradient-to-tr from-green-500 to-blue-500/75"
           : active
           ? "bg-gradient-to-tr from-blue-500 to-purple-500/75"
           : "bg-gradient-to-tr from-blue-500 to-blue-700/75",
-      )}
+      ])}
     >
     </div>
   );
 
   const circleGradient = (
     <div
-      class={classSet(
-        undefined,
+      class={classSet([
         complete
           ? "bg-gradient-to-br from-green-500 to-blue-700/75 py-2"
           : active
           ? "bg-gradient-to-br from-blue-500 to-purple-500/75"
           : "bg-gradient-to-br from-blue-500 to-blue-700/75",
-      )}
+      ])}
     >
     </div>
   );
@@ -40,16 +38,16 @@ export function buildTitle(
   return (
     <h1
       class={classSet(
-        undefined,
-        "text-2xl font-bold md:text-3xl inline-block my-4 bg-clip-text text-transparent",
-        textGradient.props.class,
+        [
+          "text-2xl font-bold md:text-3xl inline-block my-4 bg-clip-text text-transparent",
+        ],
+        textGradient.props,
       )}
     >
       <span
         class={classSet(
-          undefined,
-          "rounded-full px-4 py-1 border(solid 1) m-2 shadow-lg text-white",
-          circleGradient.props.class,
+          ["rounded-full px-4 py-1 border(solid 1) m-2 shadow-lg text-white"],
+          circleGradient.props,
         )}
       >
         {complete ? "\u2713" : stepNumber}
@@ -81,13 +79,13 @@ export interface StepsFeaturesProps extends FeaturesProps {
 export function StepsFeatures(props: StepsFeaturesProps) {
   return (
     <Features
-      class="m-2 md:m-8 text-center"
       {...props}
+      class={classSet(["m-2 md:m-8 text-center"], props, "-:")}
     >
-      {props.children?.map((childStep, i) => {
+      {props.children?.map((childStep: StepFeature, i) => {
         const active = props.step == i;
 
-        const complete: boolean = props.step as number > i;
+        const complete: boolean = (props.step as number) > i;
 
         const title = typeof childStep.title === "string"
           ? buildTitle(i + 1, childStep.title, complete, active)
@@ -96,16 +94,16 @@ export function StepsFeatures(props: StepsFeaturesProps) {
         return {
           title: title,
           class: classSet(
-            undefined,
-            "shadow-lg p-4 m-4 justify-start sm:p-1 sm:m-1",
-            childStep.class,
+            ["shadow-lg p-4 m-4 justify-start sm:p-1 sm:m-1"],
+            {
+              class: childStep.class,
+            },
+            "-:",
           ),
           displayStyle: DisplayStyleTypes.Center,
           children: (
             <>
-              <p class="m-2">
-                {childStep.description}
-              </p>
+              <p class="m-2">{childStep.description}</p>
 
               {props.step === i && childStep.children}
             </>

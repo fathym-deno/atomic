@@ -23,10 +23,7 @@ export function ActionGroup(props: ActionGroupProps) {
     ));
 
   return (
-    <nav
-      {...props}
-      class={classSet(props, "px-2 pt-2 pb-4 flex")}
-    >
+    <nav {...props} class={classSet(["px-2 pt-2 pb-4 flex"], props, "-:")}>
       {children}
     </nav>
   );
