@@ -15,7 +15,7 @@ export function Footer(props: FooterProps) {
   return (
     <footer
       {...props}
-      class={classSet(["-:bg-gray-800 -:dark:bg-gray-100"], props)}
+      class={classSet(["-:bg-gray-100 -:dark:bg-gray-800"], props)}
     >
       <div class="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
         <div class="md:flex justify-between">

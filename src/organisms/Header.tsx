@@ -60,7 +60,7 @@ export function Header(props: HeaderProps) {
     <header
       {...props}
       class={classSet([
-        "-:flex -:items-center -:justify-between -:bg-gray-800 -:dark:bg-gray-100",
+        "-:flex -:items-center -:justify-between -:bg-gray-100 -:dark:bg-gray-800",
       ], props)}
     >
       <div class="px-4 py-3 sm:p-0">{logo || logoAction}</div>
