@@ -28,7 +28,7 @@ describe("ResponsiveSet Tests", () => {
 
     assertEquals(
       html,
-      `<div class="${rootCss} md:hidden"><button class="${toggleCss} flex items-center p-2 rounded">Toggle</button></div><span toggleChildren="Toggle" class="-:hidden -:md:flex"><p>Content goes here</p></span>`,
+      `<div class="${rootCss} md:hidden"><button class="${toggleCss} flex items-center p-2 rounded">Toggle</button></div><span toggleChildren="Toggle" class="-:hidden -:md:flex -:flex-col -:md:flex-row -:md:items-center"><p>Content goes here</p></span>`,
     );
   });
 });
