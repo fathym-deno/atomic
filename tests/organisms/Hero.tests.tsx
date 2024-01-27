@@ -21,7 +21,7 @@ describe("Hero", () => {
 
     const rootCss = prefixClasses(
       "-:",
-      "flex flex-col p-8 gap-8 w-full bg-cover bg-center bg-no-repeat bg-gray-100 text-white rounded-3xl",
+      "flex flex-col p-8 gap-8 drop-shadow-lg w-full bg-cover bg-center bg-no-repeat bg-gray-100 text-white rounded-3xl",
     );
 
     assertEquals(

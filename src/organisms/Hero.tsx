@@ -34,7 +34,7 @@ export function Hero(props: HeroProps) {
       {...props}
       class={classSet(
         [
-          "-:p-8 -:gap-8",
+          "-:p-8 -:gap-8 -:drop-shadow-lg",
           (heroStyle & HeroStyleTypes.Inset) === HeroStyleTypes.Inset
             ? "-:w-[80%] -:my-8 -:mx-auto -:md:w-[90%] -:md:my-6 -:sm:w-[95%] -:sm:my-4 -:xs:w-[98%] -:xs:max-w-[98%] -:xs:my-2"
             : "-:w-full",
