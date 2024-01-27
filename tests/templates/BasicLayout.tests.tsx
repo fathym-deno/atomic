@@ -75,7 +75,7 @@ describe("Basic Layout Tests", () => {
     );
 
     assert(
-      html.includes(`main class="-:flex-grow -:min-h-[calc(100vh_-_15vh)]"`),
+      html.includes(`main class="-:flex-grow -:min-h-[100vh]"`),
     );
     assert(html.includes(`<h2>This is the main content.</h2>`));
     assert(html.includes("This is a description of the test"));
