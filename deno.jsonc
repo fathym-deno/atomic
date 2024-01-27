@@ -3,7 +3,7 @@
     "build": "deno task build:fmt && deno task build:lint && deno task build:tailwind && deno task test",
     "build:fmt": "deno fmt",
     "build:lint": "deno lint",
-    "build:tailwind": "deno run -A tailwind-components.config.ts",
+    "build:tailwind": "npx rimraf ./build/tailwind-components.config &&  deno run -A tailwind-components.config.ts",
     "deploy": "deno task build && ftm git",
     "dev-config": "deno task dev-tailwind",
     "dev-tailwind": "echo '// deno-lint-ignore no-empty\n{}' > tailwind.config.js",
