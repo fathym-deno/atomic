@@ -59,7 +59,7 @@ export function Header(props: HeaderProps) {
   return (
     <header
       {...props}
-      class={classSet(["flex items-center justify-between"], props, "-:")}
+      class={classSet(["-:flex -:items-center -:justify-between"], props)}
     >
       <div class="px-4 py-3 sm:p-0">{logo || logoAction}</div>
 

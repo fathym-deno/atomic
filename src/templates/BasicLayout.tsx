@@ -40,9 +40,8 @@ export function BasicLayout(props: BasicLayoutProps) {
       {props.children && (
         <main
           class={classSet(
-            ["flex-grow", "min-h-[calc(100vh_-_15vh)]"],
+            ["-:flex-grow", "-:min-h-[calc(100vh_-_15vh)]"],
             props,
-            "-:",
           )}
         >
           {props.children}

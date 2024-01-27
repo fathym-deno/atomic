@@ -19,7 +19,7 @@ export function ResponsiveSet(props: ResponsiveSetProps) {
         {props.children}
       </MenuButton>
 
-      <span {...props} class={classSet(["hidden md:flex"], props, "-:")}>
+      <span {...props} class={classSet(["-:hidden -:md:flex"], props)}>
         {props.children}
       </span>
     </>

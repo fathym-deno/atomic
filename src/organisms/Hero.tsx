@@ -34,17 +34,16 @@ export function Hero(props: HeroProps) {
       {...props}
       class={classSet(
         [
-          "p-8 gap-8",
+          "-:p-8 -:gap-8",
           (heroStyle & HeroStyleTypes.Inset) === HeroStyleTypes.Inset
-            ? "w-[80%] my-8 mx-auto md:w-[90%] md:my-6 sm:w-[95%] sm:my-4 xs:w-[98%] xs:max-w-[98%] xs:my-2"
-            : "w-full",
-          "bg-cover bg-center bg-no-repeat bg-gray-100 text-white",
+            ? "-:w-[80%] -:my-8 -:mx-auto -:md:w-[90%] -:md:my-6 -:sm:w-[95%] -:sm:my-4 -:xs:w-[98%] -:xs:max-w-[98%] -:xs:my-2"
+            : "-:w-full",
+          "-:bg-cover -:bg-center -:bg-no-repeat -:bg-gray-100 -:text-white",
           (heroStyle & HeroStyleTypes.Rounded) === HeroStyleTypes.Rounded
-            ? "rounded-3xl"
+            ? "-:rounded-3xl"
             : undefined,
         ],
         props,
-        "-:",
       )}
     >
       <div

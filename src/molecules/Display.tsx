@@ -64,19 +64,18 @@ export function Display(props: DisplayProps) {
       {...props}
       class={classSet(
         [
-          "flex flex-col",
+          "-:flex -:flex-col",
           (displayStyle & DisplayStyleTypes.Center) === DisplayStyleTypes.Center
-            ? "justify-center items-center"
+            ? "-:justify-center -:items-center"
             : undefined,
           (displayStyle & DisplayStyleTypes.Top) === DisplayStyleTypes.Top
-            ? "justify-start items-start"
+            ? "-:justify-start -:items-start"
             : undefined,
           (displayStyle & DisplayStyleTypes.Bottom) === DisplayStyleTypes.Bottom
-            ? "justify-end items-end"
+            ? "-:justify-end -:items-end"
             : undefined,
         ],
         props,
-        "-:",
       )}
     >
       {displayTitle}

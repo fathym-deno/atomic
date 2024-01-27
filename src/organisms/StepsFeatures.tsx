@@ -80,7 +80,7 @@ export function StepsFeatures(props: StepsFeaturesProps) {
   return (
     <Features
       {...props}
-      class={classSet(["m-2 md:m-8 text-center"], props, "-:")}
+      class={classSet(["-:m-2 -:md:m-8 -:text-center"], props)}
     >
       {props.children?.map((childStep: StepFeature, i) => {
         const active = props.step == i;
@@ -94,11 +94,10 @@ export function StepsFeatures(props: StepsFeaturesProps) {
         return {
           title: title,
           class: classSet(
-            ["shadow-lg p-4 m-4 justify-start sm:p-1 sm:m-1"],
+            ["-:shadow-lg -:p-4 -:m-4 -:justify-start -:sm:p-1 -:sm:m-1"],
             {
               class: childStep.class,
             },
-            "-:",
           ),
           displayStyle: DisplayStyleTypes.Center,
           children: (

@@ -21,7 +21,7 @@ export function SignIn(props: SignInProps) {
   const { oauthProviders, signInOptions } = props;
 
   return (
-    <div class={classSet(["flex flex-col space-y-4"], props, "-:")}>
+    <div class={classSet(["-:flex -:flex-col -:space-y-4"], props)}>
       {oauthProviders && (
         <ActionGroup class="flex flex-col space-y-2">
           {oauthProviders.map((provider, index) => (

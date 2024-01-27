@@ -1,4 +1,4 @@
-import { appendTailwindComponentsConfig, JSX } from "../src.deps.ts";
+import { JSX } from "../src.deps.ts";
 
 export type ClassedProps = {
   class?: string | undefined | JSX.SignalLike<string | undefined>;
@@ -44,7 +44,7 @@ export function classSet(
     .filter((c) => c)
     .join(" ");
 
-  appendTailwindComponentsConfig(finalClasses).then();
+  // appendTailwindComponentsConfig(finalClasses).then();
 
   return finalClasses;
 }
