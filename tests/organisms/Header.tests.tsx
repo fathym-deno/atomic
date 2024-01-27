@@ -41,11 +41,11 @@ describe("Header Tests", () => {
   describe("Logo Simple", () => {
     const html = render(
       <Header
-        logo={Object.assign(new HeaderLogo(), {
+        logo={{
           LogoHref: "/",
           LogoUrl: "http://localhost:8000/logo.svg",
           LogoAlt: "Fathym Open BioTech",
-        })}
+        }}
         nav={
           <>
             <Action href="/" class="text-xl mx-1">
@@ -73,24 +73,28 @@ describe("Header Tests", () => {
   describe("Nav Simple", () => {
     const html = render(
       <Header
-        logo={Object.assign(new HeaderLogo(), {
+        logo={{
           LogoHref: "/",
           LogoUrl: "http://localhost:8000/logo.svg",
           LogoAlt: "Fathym Open BioTech",
-        })}
-        nav={[{
-          class: "text-xl mx-1",
-          href: "/",
-          children: "Home",
-        }, {
-          class: "text-xl mx-1",
-          href: "/about",
-          children: "About",
-        }, {
-          class: "text-xl mx-1",
-          href: "/contact",
-          children: "Contact",
-        }]}
+        }}
+        nav={[
+          {
+            class: "text-xl mx-1",
+            href: "/",
+            children: "Home",
+          },
+          {
+            class: "text-xl mx-1",
+            href: "/about",
+            children: "About",
+          },
+          {
+            class: "text-xl mx-1",
+            href: "/contact",
+            children: "Contact",
+          },
+        ]}
       />,
     );
 

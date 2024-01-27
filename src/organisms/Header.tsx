@@ -10,13 +10,13 @@ import { ActionGroup } from "../molecules/ActionGroup.tsx";
 import { classSet } from "../utils/jsx.utils.ts";
 import { MenuButton, MenuButtonStyleTypes } from "../molecules/MenuButton.tsx";
 
-export class HeaderLogo {
-  public LogoAlt?: string;
+export type HeaderLogo = {
+  LogoAlt?: string;
 
-  public LogoUrl?: string;
+  LogoUrl?: string;
 
-  public LogoHref?: string;
-}
+  LogoHref?: string;
+} & JSX.HTMLAttributes<HTMLImageElement>;
 
 export function useHeaderLogoChildren(
   children: ComponentChildren | HeaderLogo,
@@ -38,8 +38,12 @@ export function useHeaderLogoChildren(
     >
       <img
         src={logoDetails?.LogoUrl}
-        class="w-48 sm:w-32"
         alt={logoDetails?.LogoAlt}
+        {...(logoDetails || {})}
+        class={classSet(
+          ["-:w-48 -:sm:w-32 -:fill-black -:dark:fill-white"],
+          logoDetails,
+        )}
       />
     </Action>
   );
@@ -59,9 +63,12 @@ export function Header(props: HeaderProps) {
   return (
     <header
       {...props}
-      class={classSet([
-        "-:flex -:items-center -:justify-between -:bg-gray-100 -:dark:bg-gray-800",
-      ], props)}
+      class={classSet(
+        [
+          "-:flex -:items-center -:justify-between -:bg-gray-100 -:dark:bg-gray-800",
+        ],
+        props,
+      )}
     >
       <div class="px-4 py-3 sm:p-0">{logo || logoAction}</div>
 
