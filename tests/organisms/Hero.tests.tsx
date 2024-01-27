@@ -26,7 +26,7 @@ describe("Hero", () => {
 
     assertEquals(
       html,
-      `<div callToAction="Call to action" heroStyle="1" class="${rootCss}"><div class="flex flex-col [&amp;>*]:mx-auto"><p class="text-xl max-w-lg text-blue-100">Call to action</p><nav class="-:px-2 -:pt-2 -:pb-4 -:flex"></nav></div></div>`,
+      `<div callToAction="Call to action" heroStyle="1" class="${rootCss}"><div class="flex flex-col [&amp;>*]:mx-auto"><p class="text-xl max-w-lg text-blue-100">Call to action</p><nav class="-:px-2 -:flex -:items-center"></nav></div></div>`,
     );
   });
 });
