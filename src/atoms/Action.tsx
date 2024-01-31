@@ -44,10 +44,12 @@ export function Action(props: ActionProps) {
           "-:block -:font-bold",
           "-:transition-colors -:duration-200 -:ease-out",
           (actionStyle & ActionStyleTypes.Icon) === ActionStyleTypes.Icon
-            ? "-:px-1 -:py-1 -:hover:text-blue-700 -:hover:text-opacity-80"
+            ? "-:px-2 -:py-2 -:hover:text-blue-700 -:hover:text-opacity-80"
             : "-:px-4 -:py-2",
           (actionStyle & ActionStyleTypes.Rounded) === ActionStyleTypes.Rounded
-            ? "-:rounded"
+            ? (actionStyle & ActionStyleTypes.Icon) === ActionStyleTypes.Icon
+              ? "-:rounded-full"
+              : "-:rounded"
             : "",
           (actionStyle & ActionStyleTypes.Solid) === ActionStyleTypes.Solid
             ? "-:bg-blue-500 -:text-white"

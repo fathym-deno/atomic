@@ -48,8 +48,11 @@ export function MenuButton(props: MenuButtonProps) {
     <>
       <div class={classSet(["-:menu-wrapper -:relative"], props)}>
         <Action
+          actionStyle={ActionStyleTypes.Link |
+            ActionStyleTypes.Rounded |
+            ActionStyleTypes.Icon}
           onClick={() => setShowMenu(!showMenu)}
-          class="flex items-center p-2 rounded"
+          class="flex items-center"
         >
           {props.toggleChildren}
         </Action>

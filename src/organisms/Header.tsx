@@ -72,7 +72,7 @@ export function Header(props: HeaderProps) {
     >
       <div class="px-4 py-3 sm:p-0">{logo || logoAction}</div>
 
-      <ActionGroup>{props.nav}</ActionGroup>
+      <ActionGroup class="flex-1">{props.nav}</ActionGroup>
     </header>
   );
 }
