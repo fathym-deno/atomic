@@ -1,5 +1,14 @@
-export * from "./src/atoms/_exports.ts";
-export * from "./src/molecules/_exports.ts";
-export * from "./src/organisms/_exports.ts";
-export * from "./src/templates/_exports.ts";
-export * from "./src/utils/_exports.ts";
+export * from "./src/_exports.ts";
+
+export function islandsConfig() {
+  return [
+    {
+      baseLocation: import.meta.url,
+      paths: [
+        "./src/molecules/MenuButton.tsx",
+        "./src/molecules/ResponsiveSet.tsx",
+        "./src/molecules/Tabs.tsx",
+      ],
+    },
+  ];
+}
