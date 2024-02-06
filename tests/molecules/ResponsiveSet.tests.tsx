@@ -19,7 +19,7 @@ describe("ResponsiveSet Tests", () => {
       </ResponsiveSet>,
     );
 
-    const rootCss = prefixClasses("-:", "menu-wrapper relative");
+    const rootCss = prefixClasses("-:", "relative");
 
     const toggleCss = prefixClasses(
       "-:",
@@ -28,7 +28,7 @@ describe("ResponsiveSet Tests", () => {
 
     assertEquals(
       html,
-      `<div class="${rootCss} md:hidden"><button actionStyle="28" class="${toggleCss} flex items-center">Toggle</button></div><span toggleChildren="Toggle" class="-:hidden -:md:flex -:flex-col -:md:flex-row -:md:items-center"><p>Content goes here</p></span>`,
+      `<div class="menu-wrapper ${rootCss} md:hidden"><button actionStyle="28" class="${toggleCss} flex items-center">Toggle</button></div><span toggleChildren="Toggle" class="-:hidden -:md:flex -:flex-col -:md:flex-row -:md:items-center"><p>Content goes here</p></span>`,
     );
   });
 });

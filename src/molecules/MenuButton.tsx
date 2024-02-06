@@ -46,7 +46,7 @@ export function MenuButton(props: MenuButtonProps) {
 
   return (
     <>
-      <div class={classSet(["-:menu-wrapper -:relative"], props)}>
+      <div class={classSet(["menu-wrapper -:relative"], props)}>
         <Action
           actionStyle={ActionStyleTypes.Link |
             ActionStyleTypes.Rounded |
