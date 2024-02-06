@@ -4,6 +4,7 @@ export {
   type JSX,
   type VNode,
 } from "preact";
+export { type ForwardedRef, forwardRef } from "preact/compat";
 export { useEffect, useState } from "preact/hooks";
 
 export * from "https://deno.land/x/fathym_common@v0.0.137/mod.ts";

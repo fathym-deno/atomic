@@ -1,37 +1,56 @@
-import { ComponentChildren, JSX, useState } from "../../src.deps.ts";
-import { classSet } from "../../utils/jsx.utils.ts";
+import { ForwardedRef } from '../../src.deps.ts';
+import {
+  ComponentChildren,
+  forwardRef,
+  JSX,
+  useState,
+} from '../../src.deps.ts';
+import { classSet } from '../../utils/jsx.utils.ts';
 
-export type SlideToggleProps = JSX.HTMLAttributes<HTMLInputElement> & {
+export type SlideToggleProps = {
   children?: ComponentChildren;
-};
 
-export function SlideToggle(props: SlideToggleProps) {
-  // const { checked, value, ...rest } = props;
+  ref?: ForwardedRef<HTMLInputElement>;
+} & JSX.HTMLAttributes<HTMLInputElement>;
 
-  // const [checkedState, setCheckedState] = useState(checked);
+export const SlideToggle = forwardRef(
+  (props: SlideToggleProps, ref: ForwardedRef<HTMLInputElement>) => {
+    // const { checked, value, ...rest } = props;
 
-  //       // onChange={() => setCheckedState(!checked)}
-  //       // value={value}
-  //       // checked={checkedState}
-  return (
-    <label className="relative inline-flex items-center cursor-pointer">
-      <input {...props} type="checkbox" class="sr-only peer" />
+    // const [checkedState, setCheckedState] = useState(checked);
 
-      <div
-        class={classSet(
-          [
-            "peer -:w-11 -:h-6 -:bg-gray-200 -:peer-focus:outline-none -:peer-focus:ring-4 -:peer-focus:ring-blue-300 -:dark:peer-focus:ring-blue-800 -:rounded-full -:dark:bg-gray-700 -:peer-checked:after:translate-x-full -:peer-checked:after:border-white -:after:content-[''] -:after:absolute -:after:top-[2px] -:after:left-[2px] -:after:bg-white -:after:border-gray-300 -:after:border -:after:rounded-full -:after:h-5 -:after:w-5 -:after:transition-all -:dark:border-gray-600 -:peer-checked:bg-blue-600",
-          ],
-          props,
-        )}
+    //       // onChange={() => setCheckedState(!checked)}
+    //       // value={value}
+    //       // checked={checkedState}
+    return (
+      <label
+        for="slideToggle"
+        class="relative inline-flex items-center cursor-pointer"
       >
-      </div>
+        <input
+          {...props}
+          id="slideToggle"
+          name="slideToggle"
+          type="checkbox"
+          ref={ref}
+          class="sr-only peer"
+        />
 
-      {props.children && (
-        <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
-          {props.children}
-        </span>
-      )}
-    </label>
-  );
-}
+        <div
+          class={classSet(
+            [
+              "-:w-11 -:h-6 -:bg-gray-200 -:peer-focus:outline-none -:peer-focus:ring-4 -:peer-focus:ring-blue-300 -:dark:peer-focus:ring-blue-800 -:rounded-full -:dark:bg-gray-700 -:peer-checked:after:translate-x-full -:peer-checked:after:border-white -:after:content-[''] -:after:absolute -:after:top-[2px] -:after:left-[2px] -:after:bg-white -:after:border-gray-300 -:after:border -:after:rounded-full -:after:h-5 -:after:w-5 -:after:transition-all -:dark:border-gray-600 -:peer-checked:bg-blue-600",
+            ],
+            props
+          )}
+        ></div>
+
+        {props.children && (
+          <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+            {props.children}
+          </span>
+        )}
+      </label>
+    );
+  }
+);
