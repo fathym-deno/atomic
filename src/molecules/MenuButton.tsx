@@ -60,7 +60,7 @@ export function MenuButton(props: MenuButtonProps) {
         {showMenu && (
           <div
             class={classSet([
-              "bg-white shadow-md",
+              "bg-gray-300 dark:bg-gray-700 shadow-md",
               props.menuStyle === MenuButtonStyleTypes.Popover
                 ? "absolute right-0 mt-2"
                 : undefined,
