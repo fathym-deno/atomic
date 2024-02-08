@@ -4,6 +4,7 @@ export default [
 		Components: [
 			"./src/atoms/Action.tsx",
 			"./src/atoms/forms/Input.tsx",
+			"./src/atoms/forms/InputWrapper.tsx",
 			"./src/atoms/forms/Select.tsx",
 			"./src/atoms/forms/SlideToggle.tsx",
 			"./src/molecules/ActionGroup.tsx",

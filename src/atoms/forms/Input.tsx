@@ -1,6 +1,17 @@
 import { ForwardedRef, forwardRef, JSX } from "../../src.deps.ts";
 import { classSet } from "../../utils/jsx.utils.ts";
 
+export function numMaxLengthShield(
+  e: JSX.TargetedKeyboardEvent<HTMLInputElement>,
+) {
+  if (e.currentTarget.value.length >= e.currentTarget.maxLength) {
+    e.currentTarget.value = e.currentTarget.value.slice(
+      0,
+      e.currentTarget.maxLength - 1,
+    );
+  }
+}
+
 export type InputProps =
   & {
     multiline?: boolean;
