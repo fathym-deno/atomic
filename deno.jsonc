@@ -21,6 +21,7 @@
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
   },
+  "lock": false,
   "fmt": {
     "include": ["./**/*.ts", "./**/*.tsx"],
     "options": {},
