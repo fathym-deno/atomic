@@ -15,28 +15,25 @@
   "imports": {
     "$dnt": "https://deno.land/x/dnt/mod.ts",
     "preact": "https://esm.sh/preact@10.19.2",
-    "preact/": "https://esm.sh/preact@10.19.2/",
-    "$std/": "https://deno.land/std@0.211.0/"
+    "preact/": "https://esm.sh/preact@10.19.2/"
   },
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
   },
-  "lock": false,
   "fmt": {
     "include": ["./**/*.ts", "./**/*.tsx"],
     "options": {},
-    "exclude": [ ]
+    "exclude": []
   },
   "lint": {
     "include": ["./**/*.ts", "./**/*.tsx"],
     "rules": {
       "include": [],
       "exclude": [],
-      "tags": [
-        "recommended"
-      ]
+      "tags": ["recommended"]
     },
-    "exclude": [ ]
-  }
+    "exclude": []
+  },
+  "unstable": ["kv"]
 }
