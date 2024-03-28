@@ -8,7 +8,7 @@ import {
   render,
 } from "../../test.deps.ts";
 
-import { SlideToggle } from "../../../src/atoms/forms/SlideToggle.tsx";
+import SlideToggle from "../../../src/atoms/forms/SlideToggle.tsx";
 import { prefixClasses } from "../../../src/utils/jsx.utils.ts";
 
 describe("SlideToggle Tests", () => {

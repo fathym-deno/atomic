@@ -7,6 +7,8 @@ import {
 } from "../atoms/Action.tsx";
 import { classSet } from "../utils/jsx.utils.ts";
 
+export const IsIsland = true;
+
 export enum MenuButtonStyleTypes {
   Popover = 1 << 0,
   Slideout = 1 << 1,
@@ -21,7 +23,7 @@ export interface MenuButtonProps extends JSX.HTMLAttributes<HTMLElement> {
   toggleChildren: ComponentChildren;
 }
 
-export function MenuButton(props: MenuButtonProps) {
+export default function MenuButton(props: MenuButtonProps) {
   const { nav, navActions } = useActionChildren(props.children);
 
   const [showMenu, setShowMenu] = useState(false);

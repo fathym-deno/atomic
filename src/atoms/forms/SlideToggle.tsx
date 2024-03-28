@@ -7,13 +7,15 @@ import {
 } from "../../src.deps.ts";
 import { classSet } from "../../utils/jsx.utils.ts";
 
+export const IsIsland = true;
+
 export type SlideToggleProps = {
   children?: ComponentChildren;
 
   ref?: ForwardedRef<HTMLInputElement>;
 } & JSX.HTMLAttributes<HTMLInputElement>;
 
-export const SlideToggle = forwardRef(
+export default forwardRef(
   (props: SlideToggleProps, ref: ForwardedRef<HTMLInputElement>) => {
     // const { checked, value, ...rest } = props;
 

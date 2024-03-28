@@ -1,5 +1,5 @@
 import { ComponentChildren, JSX } from "../src.deps.ts";
-import { MenuButton, MenuButtonStyleTypes } from "./MenuButton.tsx";
+import MenuButton, { MenuButtonStyleTypes } from "./MenuButton.tsx";
 import { classSet } from "../utils/jsx.utils.ts";
 
 export interface ResponsiveSetProps extends JSX.HTMLAttributes<HTMLElement> {

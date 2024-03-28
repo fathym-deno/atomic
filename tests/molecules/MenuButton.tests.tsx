@@ -1,7 +1,6 @@
 import { assert, describe, render } from "../test.deps.ts";
 
-import {
-  MenuButton,
+import MenuButton, {
   MenuButtonStyleTypes,
 } from "../../src/molecules/MenuButton.tsx";
 
