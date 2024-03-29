@@ -1,4 +1,4 @@
-import { ForwardedRef } from "../../src.deps.ts";
+import { ComponentType, ForwardedRef } from "../../src.deps.ts";
 import {
   ComponentChildren,
   forwardRef,
@@ -48,5 +48,5 @@ export default function SlideToggle(props: SlideToggleProps) {
         </label>
       );
     },
-  );
+  ) as ComponentType;
 }

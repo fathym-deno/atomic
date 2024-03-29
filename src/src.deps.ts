@@ -1,5 +1,6 @@
 export {
   type ComponentChildren,
+  type ComponentType,
   isValidElement,
   type JSX,
   type VNode,
