@@ -42,7 +42,11 @@ export function useDisplayChildren(
 export function Display(props: DisplayProps) {
   const displayStyle = props.displayStyle || DisplayStyleTypes.None;
 
-  const displayTitle = typeof props.title === "string"
+  const hoverTitle = typeof props.title === "string"
+    ? (props.title as string)
+    : undefined;
+
+  const displayTitle = hoverTitle
     ? (
       <h1
         class={classSet([
@@ -52,7 +56,7 @@ export function Display(props: DisplayProps) {
             : "text-2xl md:text-3xl inline-block",
         ])}
       >
-        {props.title}
+        {hoverTitle}
       </h1>
     )
     : (
@@ -62,6 +66,7 @@ export function Display(props: DisplayProps) {
   return (
     <div
       {...props}
+      title={hoverTitle}
       class={classSet(
         [
           "-:flex -:flex-col",
