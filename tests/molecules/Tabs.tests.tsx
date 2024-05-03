@@ -8,7 +8,7 @@ import {
   render,
 } from "../test.deps.ts";
 
-import { Tabs } from "../../src/molecules/Tabs.tsx";
+import Tabs from "../../src/molecules/Tabs.tsx";
 
 describe("Tabs Tests", () => {
   it("Renders tabs with provided props", () => {
