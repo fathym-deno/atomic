@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "build": "deno task build:fmt && deno task build:lint && deno task build:tailwind && deno task test",
+    "build": "deno task build:fmt && deno task build:lint && deno task test",
     "build:fmt": "deno fmt",
     "build:lint": "deno lint",
     "build:tailwind": "npx rimraf ./build/tailwind-components.config &&  deno run -A tailwind-components.config.ts",
