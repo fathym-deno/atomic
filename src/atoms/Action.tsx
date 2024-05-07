@@ -1,4 +1,4 @@
-import { ComponentChildren, isValidElement, JSX, VNode } from "../src.deps.ts";
+import { ComponentChildren, JSX } from "../src.deps.ts";
 import { classSet } from "../utils/jsx.utils.ts";
 
 export enum ActionStyleTypes {
