@@ -1,14 +1,6 @@
 import { Hero, HeroProps } from "../../src/organisms/Hero.tsx";
 import { prefixClasses } from "../../src/utils/jsx.utils.ts";
-import {
-  afterEach,
-  assert,
-  assertEquals,
-  beforeEach,
-  describe,
-  it,
-  render,
-} from "../test.deps.ts";
+import { assertEquals, describe, it, render } from "../test.deps.ts";
 
 describe("Hero", () => {
   const defaultProps: HeroProps = {

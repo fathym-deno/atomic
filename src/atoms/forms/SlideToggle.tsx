@@ -1,10 +1,5 @@
-import { ComponentType, ForwardedRef } from "../../src.deps.ts";
-import {
-  ComponentChildren,
-  forwardRef,
-  JSX,
-  useState,
-} from "../../src.deps.ts";
+import { ForwardedRef } from "../../src.deps.ts";
+import { ComponentChildren, forwardRef, JSX } from "../../src.deps.ts";
 import { classSet } from "../../utils/jsx.utils.ts";
 
 export const IsIsland = true;

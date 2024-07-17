@@ -1,5 +1,4 @@
 import { ComponentChildren, JSX, useEffect, useState } from "../src.deps.ts";
-import { classSet } from "../utils/jsx.utils.ts";
 
 export type LineItemProps = Omit<JSX.HTMLAttributes<HTMLDivElement>, "icon"> & {
   actionPath: string;

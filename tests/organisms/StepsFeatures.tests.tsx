@@ -1,15 +1,5 @@
-import {
-  afterEach,
-  assert,
-  assertEquals,
-  beforeEach,
-  describe,
-  it,
-  render,
-} from "../test.deps.ts";
-import { DisplayProps } from "../../src/molecules/Display.tsx";
+import { assert, describe, render } from "../test.deps.ts";
 import { StepsFeatures } from "../../src/organisms/StepsFeatures.tsx";
-import { factory } from "../../mod.ts";
 
 describe("StepsFeatures Tests", () => {
   describe("Simple", () => {

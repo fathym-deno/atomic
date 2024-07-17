@@ -1,15 +1,4 @@
-import {
-  afterEach,
-  assert,
-  assertEquals,
-  beforeEach,
-  describe,
-  it,
-  render,
-} from "../../test.deps.ts";
-
-import SlideToggle from "../../../src/atoms/forms/SlideToggle.tsx";
-import { prefixClasses } from "../../../src/utils/jsx.utils.ts";
+import { describe, it } from "../../test.deps.ts";
 
 describe("SlideToggle Tests", () => {
   it("Renders slide toggle element with provided props", () => {

@@ -1,13 +1,5 @@
 import { SignIn, SignInProps } from "../../src/organisms/SignIn.tsx";
-import {
-  afterEach,
-  assert,
-  assertEquals,
-  beforeEach,
-  describe,
-  it,
-  render,
-} from "../test.deps.ts";
+import { assert, describe, it, render } from "../test.deps.ts";
 
 describe("SignIn", () => {
   const defaultProps: SignInProps = {

@@ -1,12 +1,4 @@
-import {
-  afterEach,
-  assert,
-  assertEquals,
-  beforeEach,
-  describe,
-  it,
-  render,
-} from "../test.deps.ts";
+import { assertEquals, describe, render } from "../test.deps.ts";
 
 import { Action, ActionStyleTypes } from "../../src/atoms/Action.tsx";
 import { prefixClasses } from "../../src/utils/jsx.utils.ts";

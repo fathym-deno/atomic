@@ -1,8 +1,6 @@
 import { ComponentChildren, JSX } from "../src.deps.ts";
 import { classSet } from "../utils/jsx.utils.ts";
 import { DisplayProps, useDisplayChildren } from "../molecules/Display.tsx";
-import { ActionProps, useActionChildren } from "../atoms/Action.tsx";
-import { ActionGroup } from "../molecules/ActionGroup.tsx";
 
 export interface FeaturesProps extends JSX.HTMLAttributes<HTMLDivElement> {
   callToAction?: ComponentChildren;

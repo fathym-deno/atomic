@@ -1,4 +1,4 @@
-import { ComponentChildren, JSX } from "../src.deps.ts";
+import { JSX } from "../src.deps.ts";
 import { Action, ActionProps, ActionStyleTypes } from "../atoms/Action.tsx";
 import { Input, InputProps } from "../atoms/forms/Input.tsx";
 import { ActionGroup } from "../molecules/ActionGroup.tsx";

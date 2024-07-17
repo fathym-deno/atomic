@@ -1,15 +1,7 @@
-import {
-  afterEach,
-  assert,
-  assertEquals,
-  beforeEach,
-  describe,
-  it,
-  render,
-} from "../test.deps.ts";
+import { assert, describe, render } from "../test.deps.ts";
 
 import { Action } from "../../src/atoms/Action.tsx";
-import { Header, HeaderLogo } from "../../src/organisms/Header.tsx";
+import { Header } from "../../src/organisms/Header.tsx";
 
 describe("Header Tests", () => {
   describe("Logo Children", () => {

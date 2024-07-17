@@ -1,20 +1,5 @@
-import {
-  Action,
-  BasicLayout,
-  factory,
-  Footer,
-  Header,
-  HeaderLogo,
-} from "../../mod.ts";
-import {
-  afterEach,
-  assert,
-  assertEquals,
-  beforeEach,
-  describe,
-  it,
-  render,
-} from "../test.deps.ts";
+import { Action, BasicLayout, Footer, Header } from "../../mod.ts";
+import { assert, describe, render } from "../test.deps.ts";
 
 describe("Basic Layout Tests", () => {
   describe("With Components", () => {

@@ -1,12 +1,4 @@
-import {
-  afterEach,
-  assert,
-  assertEquals,
-  beforeEach,
-  describe,
-  it,
-  render,
-} from "../test.deps.ts";
+import { assert, describe, render } from "../test.deps.ts";
 
 import { Action } from "../../src/atoms/Action.tsx";
 import { ActionGroup } from "../../src/molecules/ActionGroup.tsx";

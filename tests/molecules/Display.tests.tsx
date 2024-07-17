@@ -1,12 +1,4 @@
-import {
-  afterEach,
-  assert,
-  assertEquals,
-  beforeEach,
-  describe,
-  it,
-  render,
-} from "../test.deps.ts";
+import { assertEquals, describe, it, render } from "../test.deps.ts";
 
 import { Display, DisplayStyleTypes } from "../../src/molecules/Display.tsx";
 import { prefixClasses } from "../../src/utils/jsx.utils.ts";

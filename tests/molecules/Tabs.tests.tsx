@@ -1,12 +1,4 @@
-import {
-  afterEach,
-  assert,
-  assertEquals,
-  beforeEach,
-  describe,
-  it,
-  render,
-} from "../test.deps.ts";
+import { assert, describe, it, render } from "../test.deps.ts";
 
 import Tabs from "../../src/molecules/Tabs.tsx";
 
