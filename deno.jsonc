@@ -1,5 +1,5 @@
 {
-  "name": "@fathym/atomic-icons",
+  "name": "@fathym/atomic",
   "version": "0.0.0",
   "exports": {
     ".": "./mod.ts",
