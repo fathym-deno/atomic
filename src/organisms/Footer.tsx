@@ -11,7 +11,7 @@ export interface FooterProps extends JSX.HTMLAttributes<HTMLElement> {
   nav?: ComponentChildren | Array<ActionProps>;
 }
 
-export function Footer(props: FooterProps) {
+export function Footer(props: FooterProps): JSX.Element {
   return (
     <footer
       {...props}

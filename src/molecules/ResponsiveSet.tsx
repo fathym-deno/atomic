@@ -8,7 +8,7 @@ export interface ResponsiveSetProps extends JSX.HTMLAttributes<HTMLElement> {
   toggleChildren: ComponentChildren;
 }
 
-export function ResponsiveSet(props: ResponsiveSetProps) {
+export function ResponsiveSet(props: ResponsiveSetProps): JSX.Element {
   return (
     <>
       <MenuButton

@@ -1,12 +1,12 @@
-import { assert, describe, render } from "../test.deps.ts";
+import { assert, preactRenderToString } from "../test.deps.ts";
 
 import MenuButton, {
   MenuButtonStyleTypes,
 } from "../../src/molecules/MenuButton.tsx";
 
-describe("Menu Button Tests", () => {
-  describe("Menu Button Children", () => {
-    const html = render(
+Deno.test("Menu Button Tests", async (t) => {
+  await t.step("Menu Button Children", () => {
+    const html = preactRenderToString(
       <MenuButton
         menuStyle={MenuButtonStyleTypes.Responsive}
         toggleChildren={<h1>Menu</h1>}

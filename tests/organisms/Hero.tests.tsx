@@ -1,15 +1,15 @@
 import { Hero, HeroProps } from "../../src/organisms/Hero.tsx";
 import { prefixClasses } from "../../src/utils/jsx.utils.ts";
-import { assertEquals, describe, it, render } from "../test.deps.ts";
+import { assertEquals, preactRenderToString } from "../test.deps.ts";
 
-describe("Hero", () => {
+Deno.test("Hero", async (t) => {
   const defaultProps: HeroProps = {
     callToAction: "Call to action",
     heroStyle: 1,
   };
 
-  it("renders with default props", () => {
-    const html = render(<Hero {...defaultProps} />);
+  await t.step("renders with default props", () => {
+    const html = preactRenderToString(<Hero {...defaultProps} />);
 
     const rootCss = prefixClasses(
       "-:",

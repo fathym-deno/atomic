@@ -11,7 +11,7 @@ export type InputWrapperProps = {
   text?: string;
 } & JSX.HTMLAttributes<HTMLDivElement>;
 
-export function InputWrapper(props: InputWrapperProps) {
+export function InputWrapper(props: InputWrapperProps): JSX.Element {
   const position = props.position || "suffix";
 
   return (

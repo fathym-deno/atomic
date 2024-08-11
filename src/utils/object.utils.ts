@@ -1,5 +1,5 @@
 // deno-lint-ignore-file no-explicit-any
-export function isObject(item: any) {
+export function isObject(item: any): any {
   return (item && typeof item === "object" && !Array.isArray(item));
 }
 

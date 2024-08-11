@@ -39,7 +39,7 @@ export function useDisplayChildren(
   return { display, displayDetails, displayElement };
 }
 
-export function Display(props: DisplayProps) {
+export function Display(props: DisplayProps): JSX.Element {
   const displayStyle = props.displayStyle || DisplayStyleTypes.None;
 
   const hoverTitle = typeof props.title === "string"

@@ -1,4 +1,4 @@
-import { ComponentChildren } from "../src.deps.ts";
+import { ComponentChildren, JSX } from "../src.deps.ts";
 import { classSet } from "../utils/jsx.utils.ts";
 import { Features, FeaturesProps } from "./Features.tsx";
 import { DisplayStyleTypes } from "../molecules/Display.tsx";
@@ -76,7 +76,7 @@ export interface StepsFeaturesProps extends FeaturesProps {
   step?: number;
 }
 
-export function StepsFeatures(props: StepsFeaturesProps) {
+export function StepsFeatures(props: StepsFeaturesProps): JSX.Element {
   return (
     <Features
       {...props}

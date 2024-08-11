@@ -17,7 +17,7 @@ export interface SignInProps extends JSX.HTMLAttributes<HTMLElement> {
   signInOptions?: SignInOptions;
 }
 
-export function SignIn(props: SignInProps) {
+export function SignIn(props: SignInProps): JSX.Element {
   const { oauthProviders, signInOptions } = props;
 
   return (

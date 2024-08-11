@@ -1,11 +1,11 @@
-import { assertEquals, describe, it, render } from "../test.deps.ts";
+import { assertEquals, preactRenderToString } from "../test.deps.ts";
 
 import { ResponsiveSet } from "../../src/molecules/ResponsiveSet.tsx";
 import { prefixClasses } from "../../src/utils/jsx.utils.ts";
 
-describe("ResponsiveSet Tests", () => {
-  it("Renders responsive set element with provided props", () => {
-    const html = render(
+Deno.test("ResponsiveSet Tests", async (t) => {
+  await t.step("Renders responsive set element with provided props", () => {
+    const html = preactRenderToString(
       <ResponsiveSet toggleChildren="Toggle">
         <p>Content goes here</p>
       </ResponsiveSet>,

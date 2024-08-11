@@ -1,4 +1,10 @@
-import { ForwardedRef, forwardRef, JSX } from "../../src.deps.ts";
+import {
+  ForwardedRef,
+  forwardRef,
+  FunctionalComponent,
+  JSX,
+  Ref,
+} from "../../src.deps.ts";
 import { classSet } from "../../utils/jsx.utils.ts";
 
 export function numMaxLengthShield(
@@ -24,7 +30,11 @@ export type InputProps =
     | JSX.HTMLAttributes<HTMLTextAreaElement>
   );
 
-export const Input = forwardRef(
+export const Input: FunctionalComponent<
+  React.PropsWithoutRef<InputProps> & {
+    ref?: Ref<HTMLInputElement | HTMLTextAreaElement> | undefined;
+  }
+> = forwardRef(
   (
     props: InputProps,
     ref: ForwardedRef<HTMLInputElement | HTMLTextAreaElement>,
