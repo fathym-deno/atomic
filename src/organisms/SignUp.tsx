@@ -15,7 +15,7 @@ export interface SignUpProps extends JSX.HTMLAttributes<HTMLElement> {
   signUpOptions?: SignUpOptions;
 }
 
-export function SignUp(props: SignUpProps) {
+export function SignUp(props: SignUpProps): JSX.Element {
   const { signUpOptions } = props;
 
   return (

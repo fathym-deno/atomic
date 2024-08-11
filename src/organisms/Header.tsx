@@ -50,7 +50,7 @@ export interface HeaderProps extends JSX.HTMLAttributes<HTMLElement> {
   nav?: ComponentChildren | Array<ActionProps>;
 }
 
-export function Header(props: HeaderProps) {
+export function Header(props: HeaderProps): JSX.Element {
   const { logo, logoAction } = useHeaderLogoChildren(props.logo);
 
   return (

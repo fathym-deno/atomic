@@ -1,6 +1,6 @@
 export * from "./src/_exports.ts";
 
-export function islandsConfig() {
+export function islandsConfig(): { baseLocation: string; paths: string[] }[] {
   return [
     {
       baseLocation: import.meta.url,

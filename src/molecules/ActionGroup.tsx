@@ -13,7 +13,7 @@ export interface ActionGroupProps extends JSX.HTMLAttributes<HTMLElement> {
   children?: ComponentChildren | Array<ActionProps>;
 }
 
-export function ActionGroup(props: ActionGroupProps) {
+export function ActionGroup(props: ActionGroupProps): JSX.Element {
   const { nav, navActions } = useActionChildren(props.children);
 
   const children: ComponentChildren = nav ||

@@ -14,7 +14,7 @@ export type LineItemProps = Omit<JSX.HTMLAttributes<HTMLDivElement>, "icon"> & {
   confirmText?: string;
 };
 
-export function LineItem(props: LineItemProps) {
+export function LineItem(props: LineItemProps): JSX.Element {
   const [reload, setReload] = useState(false);
 
   const {

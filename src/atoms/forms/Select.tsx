@@ -2,7 +2,9 @@ import {
   ComponentChildren,
   ForwardedRef,
   forwardRef,
+  FunctionalComponent,
   JSX,
+  Ref,
 } from "../../src.deps.ts";
 import { classSet } from "../../utils/jsx.utils.ts";
 
@@ -12,7 +14,11 @@ export type SelectProps = {
   ref?: ForwardedRef<HTMLSelectElement>;
 } & JSX.HTMLAttributes<HTMLSelectElement>;
 
-export const Select = forwardRef(
+export const Select: FunctionalComponent<
+  React.PropsWithoutRef<SelectProps> & {
+    ref?: Ref<HTMLSelectElement> | undefined;
+  }
+> = forwardRef(
   (props: SelectProps, ref: ForwardedRef<HTMLSelectElement>) => {
     return (
       <select

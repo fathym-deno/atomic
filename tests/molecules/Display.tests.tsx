@@ -1,11 +1,11 @@
-import { assertEquals, describe, it, render } from "../test.deps.ts";
+import { assertEquals, preactRenderToString } from "../test.deps.ts";
 
 import { Display, DisplayStyleTypes } from "../../src/molecules/Display.tsx";
 import { prefixClasses } from "../../src/utils/jsx.utils.ts";
 
-describe("Display Tests", () => {
-  it("Renders display element with provided props", () => {
-    const html = render(
+Deno.test("Display Tests", async (t) => {
+  await t.step("Renders display element with provided props", () => {
+    const html = preactRenderToString(
       <Display displayStyle={DisplayStyleTypes.Top} title="My Display">
         <p>Content goes here</p>
       </Display>,

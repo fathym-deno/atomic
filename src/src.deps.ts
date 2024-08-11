@@ -1,15 +1,14 @@
 export {
   type ComponentChildren,
   type ComponentType,
+  type FunctionalComponent,
   isValidElement,
   type JSX,
+  type Ref,
   type VNode,
-} from "https://esm.sh/preact@10.20.1";
-export {
-  type ForwardedRef,
-  forwardRef,
-} from "https://esm.sh/preact@10.20.1/compat";
-export { useEffect, useState } from "https://esm.sh/preact@10.20.1/hooks";
+} from "npm:preact@10.20.1";
+export { type ForwardedRef, forwardRef } from "npm:preact@10.20.1/compat";
+export { useEffect, useState } from "npm:preact@10.20.1/hooks";
 
-export * from "https://deno.land/x/fathym_common@v0.0.185/mod.ts";
-export { Icon } from "https://deno.land/x/fathym_atomic_icons@v0.0.39/browser.ts";
+export * from "jsr:@fathym/common@0.0.211";
+export { Icon } from "jsr:@fathym/atomic-icons@0.0.51/browser";

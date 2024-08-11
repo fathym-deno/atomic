@@ -8,7 +8,7 @@ export interface FeaturesProps extends JSX.HTMLAttributes<HTMLDivElement> {
   children?: ComponentChildren | Array<DisplayProps>;
 }
 
-export function Features(props: FeaturesProps) {
+export function Features(props: FeaturesProps): JSX.Element {
   const { displayElement } = useDisplayChildren(props.children);
 
   return (

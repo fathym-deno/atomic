@@ -1,4 +1,4 @@
-import { ComponentChildren } from "../src.deps.ts";
+import { ComponentChildren, JSX } from "../src.deps.ts";
 import { ActionProps } from "../atoms/Action.tsx";
 import { ActionGroup } from "../molecules/ActionGroup.tsx";
 import { classSet } from "../utils/jsx.utils.ts";
@@ -19,7 +19,7 @@ export interface HeroProps extends DisplayProps {
   heroStyle?: HeroStyleTypes;
 }
 
-export function Hero(props: HeroProps) {
+export function Hero(props: HeroProps): JSX.Element {
   const callToAction = typeof props.callToAction === "string"
     ? <p class="text-xl max-w-lg text-blue-100">{props.callToAction}</p>
     : (

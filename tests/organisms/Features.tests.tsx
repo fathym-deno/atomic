@@ -1,11 +1,11 @@
-import { assert, describe, render } from "../test.deps.ts";
+import { assert, preactRenderToString } from "../test.deps.ts";
 
 import { DisplayProps } from "../../src/molecules/Display.tsx";
 import { Features } from "../../src/organisms/Features.tsx";
 
-describe("Features Tests", () => {
-  describe("Simple", () => {
-    const html = render(
+Deno.test("Features Tests", async (t) => {
+  await t.step("Simple", () => {
+    const html = preactRenderToString(
       <Features>
         {[
           {

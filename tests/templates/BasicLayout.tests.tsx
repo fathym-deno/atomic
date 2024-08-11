@@ -1,8 +1,8 @@
 import { Action, BasicLayout, Footer, Header } from "../../mod.ts";
-import { assert, describe, render } from "../test.deps.ts";
+import { assert, preactRenderToString } from "../test.deps.ts";
 
-describe("Basic Layout Tests", () => {
-  describe("With Components", () => {
+Deno.test("Basic Layout Tests", async (t) => {
+  await t.step("With Components", () => {
     const logo = {
       LogoAlt: "Fathym Open BioTech",
       LogoUrl: "/o-biotech-logo.svg",
@@ -51,7 +51,7 @@ describe("Basic Layout Tests", () => {
       />
     );
 
-    const html = render(
+    const html = preactRenderToString(
       <BasicLayout header={header} footer={footer}>
         <>
           <h2>This is the main content.</h2>

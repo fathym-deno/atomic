@@ -1,7 +1,7 @@
 import { SignIn, SignInProps } from "../../src/organisms/SignIn.tsx";
-import { assert, describe, it, render } from "../test.deps.ts";
+import { assert, preactRenderToString } from "../test.deps.ts";
 
-describe("SignIn", () => {
+Deno.test("SignIn", async (t) => {
   const defaultProps: SignInProps = {
     oauthProviders: [],
     signInOptions: {
@@ -10,8 +10,8 @@ describe("SignIn", () => {
     },
   };
 
-  it("renders with default props", () => {
-    const html = render(
+  await t.step("renders with default props", () => {
+    const html = preactRenderToString(
       <SignIn {...defaultProps} />,
     );
 

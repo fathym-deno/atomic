@@ -33,7 +33,7 @@ export type ActionProps = (ActionAnchorProps | ActionButtonProps) & {
   actionStyle?: ActionStyleTypes;
 };
 
-export function Action(props: ActionProps) {
+export function Action(props: ActionProps): JSX.Element {
   const actionStyle = props.actionStyle ||
     ActionStyleTypes.Solid | ActionStyleTypes.Rounded | ActionStyleTypes.Link;
 

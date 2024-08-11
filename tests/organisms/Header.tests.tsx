@@ -1,11 +1,11 @@
-import { assert, describe, render } from "../test.deps.ts";
+import { assert, preactRenderToString } from "../test.deps.ts";
 
 import { Action } from "../../src/atoms/Action.tsx";
 import { Header } from "../../src/organisms/Header.tsx";
 
-describe("Header Tests", () => {
-  describe("Logo Children", () => {
-    const html = render(
+Deno.test("Header Tests", async (t) => {
+  await t.step("Logo Children", () => {
+    const html = preactRenderToString(
       <Header
         logo={<Action href="/">Hello World</Action>}
         nav={
@@ -30,8 +30,8 @@ describe("Header Tests", () => {
     assert(html.includes("Contact"));
   });
 
-  describe("Logo Simple", () => {
-    const html = render(
+  await t.step("Logo Simple", () => {
+    const html = preactRenderToString(
       <Header
         logo={{
           LogoHref: "/",
@@ -62,8 +62,8 @@ describe("Header Tests", () => {
     assert(html.includes("Contact"));
   });
 
-  describe("Nav Simple", () => {
-    const html = render(
+  await t.step("Nav Simple", () => {
+    const html = preactRenderToString(
       <Header
         logo={{
           LogoHref: "/",

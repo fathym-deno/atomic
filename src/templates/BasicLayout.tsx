@@ -11,7 +11,7 @@ export interface BasicLayoutProps extends JSX.HTMLAttributes<HTMLDivElement> {
   children?: ComponentChildren;
 }
 
-export function BasicLayout(props: BasicLayoutProps) {
+export function BasicLayout(props: BasicLayoutProps): JSX.Element {
   const { headerProps, header } = {
     headerProps: (props.header as HeaderProps)?.nav
       ? props.header as HeaderProps

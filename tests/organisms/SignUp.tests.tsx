@@ -1,15 +1,15 @@
 import { SignUp, SignUpProps } from "../../src/organisms/SignUp.tsx";
-import { assert, describe, it, render } from "../test.deps.ts";
+import { assert, preactRenderToString } from "../test.deps.ts";
 
-describe("SignUp", () => {
+Deno.test("SignUp", async (t) => {
   const defaultProps: SignUpProps = {
     signUpOptions: {
       submitActionProps: { id: "submit", name: "submit" },
     },
   };
 
-  it("renders with default props", () => {
-    const html = render(
+  await t.step("renders with default props", () => {
+    const html = preactRenderToString(
       <SignUp {...defaultProps} />,
     );
 

@@ -1,16 +1,16 @@
-import { assert, describe, it, render } from "../test.deps.ts";
+import { assert, preactRenderToString } from "../test.deps.ts";
 
 import Tabs from "../../src/molecules/Tabs.tsx";
 
-describe("Tabs Tests", () => {
-  it("Renders tabs with provided props", () => {
+Deno.test("Tabs Tests", async (t) => {
+  await t.step("Renders tabs with provided props", () => {
     const tabs = [
       { label: "Tab 1", content: <p>Tab 1 content</p> },
       { label: "Tab 2", content: <p>Tab 2 content</p> },
       { label: "Tab 3", content: <p>Tab 3 content</p> },
     ];
 
-    const html = render(<Tabs tabs={tabs} />);
+    const html = preactRenderToString(<Tabs tabs={tabs} />);
 
     assert(html.includes("Tab 1"));
     assert(html.includes("Tab 2"));
