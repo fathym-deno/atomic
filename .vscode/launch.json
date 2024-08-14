@@ -3,11 +3,11 @@
   "configurations": [
     {
       "request": "launch",
-      "name": "Launch Program",
+      "name": "Launch Test",
       "type": "node",
       "program": "${workspaceFolder}/tests/tests.ts",
       "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "C:\\ProgramData\\chocolatey\\lib\\deno\\deno.EXE",
+      "runtimeExecutable": "deno.exe",
       "runtimeArgs": [
         "test",
         "--config",
