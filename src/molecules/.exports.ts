@@ -5,6 +5,7 @@ import { TabsProps } from "./Tabs.tsx";
 
 export * from "./ActionGroup.tsx";
 export { type ClickOnceActionProps } from "./ClickOnceAction.tsx";
+export * from "./Collapsible.tsx";
 export * from "./Display.tsx";
 export { type MenuButtonProps, MenuButtonStyleTypes } from "./MenuButton.tsx";
 export * from "./LineItem.tsx";
