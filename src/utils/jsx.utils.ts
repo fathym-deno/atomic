@@ -56,3 +56,5 @@ export function factory<T extends { new (...args: any[]): any }>(
 ): InstanceType<T> {
   return Object.assign(new type(), data || ({} as InstanceType<T>));
 }
+
+export const IS_BROWSER = typeof document !== "undefined";
