@@ -9,7 +9,7 @@ export * from './SignIn.tsx';
 export * from './SignUp.tsx';
 
 import { FileListProps } from './FileList.tsx';
-export { type FileListProps } from './FileList.tsx';
+export { type FileListProps, type FileListTree } from './FileList.tsx';
 export const FileList: (props: FileListProps) => JSX.Element = (
   await import('../organisms/FileList.tsx')
 ).default;
