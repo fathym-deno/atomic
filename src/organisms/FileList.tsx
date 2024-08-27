@@ -80,10 +80,6 @@ export default function FileList({
     isOpenMap[keys.join("/")] = !isOpen;
 
     setTimeout(() => setIsOpenMap({ ...isOpenMap }), 0);
-
-    console.log("toggleIsOpen");
-    console.log(keys.join("/"));
-    console.log(isOpenMap[keys.join("/")]);
   };
 
   const handleFileClick = async (actionPath: string) => {
