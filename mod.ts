@@ -1,4 +1,4 @@
-export * from "./src/_exports.ts";
+export * from "./src/.exports.ts";
 
 export function islandsConfig(): { baseLocation: string; paths: string[] }[] {
   return [
