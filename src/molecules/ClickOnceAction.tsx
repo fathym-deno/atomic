@@ -1,5 +1,6 @@
 import { Action, ActionProps } from "../atoms/Action.tsx";
-import { Icon, JSX, useState } from "../src.deps.ts";
+import { Icon } from "../atoms/Icon.tsx";
+import { JSX, useState } from "../src.deps.ts";
 import { classSet } from "../utils/jsx.utils.ts";
 
 export const IsIsland = true;

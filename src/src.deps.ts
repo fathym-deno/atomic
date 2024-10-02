@@ -10,7 +10,4 @@ export {
 export { type ForwardedRef, forwardRef } from "npm:preact@10.20.1/compat";
 export { useEffect, useState } from "npm:preact@10.20.1/hooks";
 
-export * from "jsr:@fathym/common@0.2.147";
-
-// export { Icon } from '../../atomic-icons/browser.ts';
-export { Icon } from "jsr:@fathym/atomic-icons@0.0.63/browser";
+export * from "jsr:@fathym/common@0.2.155";
