@@ -24,7 +24,7 @@ Deno.test("Action Tests", async (t) => {
 
     const rootCss = prefixClasses(
       "-:",
-      "block font-bold transition-colors duration-200 ease-out px-4 py-2 rounded bg-blue-500 text-white border-none hover:bg-blue-700 hover:bg-opacity-80 hover:text-white",
+      "block font-bold transition-colors duration-200 ease-out px-4 py-2 rounded bg-blue-500 text-white border-none hover:bg-blue-700 hover:bg-opacity-80 hover:text-white opacity-50 cursor-not-allowed",
     );
 
     assertEquals(html, `<button disabled class="${rootCss}">Hello</button>`);
