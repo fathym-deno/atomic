@@ -61,7 +61,7 @@ export function Action(props: ActionProps): JSX.Element {
             (actionStyle & ActionStyleTypes.Icon) !== ActionStyleTypes.Link
             ? "-:hover:bg-blue-700 -:hover:bg-opacity-80 -:hover:text-white"
             : "",
-          props.disabled ? "-:opacity-50 -:cursor-not-allowed" : "",
+          "-:disabled:opacity-50 -:disabled:cursor-not-allowed",
         ],
         props,
       )}
