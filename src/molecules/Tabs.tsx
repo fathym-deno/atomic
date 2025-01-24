@@ -4,7 +4,7 @@ import { classSet } from "../utils/jsx.utils.ts";
 export const IsIsland = true;
 
 export interface Tab {
-  label: string;
+  label: ComponentChildren;
   content: ComponentChildren;
 }
 
