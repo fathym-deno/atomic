@@ -55,7 +55,9 @@ export default function Tabs(props: TabsProps) {
         ))}
       </div>
 
-      <div class="mt-4">{tabs[activeTabValue].content}</div>
+      {tabs[activeTabValue] && (
+        <div class="mt-4">{tabs[activeTabValue].content}</div>
+      )}
     </div>
   );
 }
