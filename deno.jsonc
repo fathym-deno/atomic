@@ -37,7 +37,7 @@
     "include": ["./**/*.ts", "./**/*.tsx"],
     "rules": {
       "include": [],
-      "exclude": [],
+      "exclude": ["ban-unknown-rule-code"],
       "tags": ["recommended"]
     },
     "exclude": []
