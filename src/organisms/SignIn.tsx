@@ -49,17 +49,19 @@ export function SignIn(props: SignInProps): JSX.Element {
             <Action
               actionStyle={ActionStyleTypes.Link}
               class="order-2 md:order-1"
-              children={"Forgot Password"}
               {...signInOptions.forgotPasswordActionProps}
-            />
+            >
+              Forgot Password
+            </Action>
 
             <Action
               type="submit"
               actionStyle={ActionStyleTypes.Solid | ActionStyleTypes.Rounded}
               class="order-1 md:order-2"
-              children={"Submit"}
               {...signInOptions.submitActionProps}
-            />
+            >
+              Submit
+            </Action>
           </div>
         </form>
       )}

@@ -12,6 +12,7 @@ export default function BrowserNavBlock(props: BrowserNavBlockProps) {
   const isBrowser = typeof document !== "undefined";
 
   if (!isBrowser) {
+    // deno-lint-ignore jsx-no-useless-fragment
     return <></>;
   }
 
@@ -34,5 +35,6 @@ export default function BrowserNavBlock(props: BrowserNavBlockProps) {
     };
   }, []);
 
+  // deno-lint-ignore jsx-no-useless-fragment
   return <></>;
 }

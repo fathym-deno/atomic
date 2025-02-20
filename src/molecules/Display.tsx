@@ -32,7 +32,7 @@ export function useDisplayChildren(
 
   const displayElement = display || (
     <>
-      {displayDetails?.map((dd) => <Display {...dd} />)}
+      {displayDetails?.map((dd, i) => <Display key={i} {...dd} />)}
     </>
   );
 

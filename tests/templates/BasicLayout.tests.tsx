@@ -35,33 +35,33 @@ Deno.test("Basic Layout Tests", async (t) => {
       <Footer
         companyName="Fathym Test"
         companyDescription="This is a description of the test"
-        nav={[{
-          class: "text-xl mx-1",
-          href: "/",
-          children: "Home",
-        }, {
-          class: "text-xl mx-1",
-          href: "/about",
-          children: "About",
-        }, {
-          class: "text-xl mx-1",
-          href: "/contact",
-          children: "Contact",
-        }]}
+        nav={[
+          {
+            class: "text-xl mx-1",
+            href: "/",
+            children: "Home",
+          },
+          {
+            class: "text-xl mx-1",
+            href: "/about",
+            children: "About",
+          },
+          {
+            class: "text-xl mx-1",
+            href: "/contact",
+            children: "Contact",
+          },
+        ]}
       />
     );
 
     const html = preactRenderToString(
       <BasicLayout header={header} footer={footer}>
-        <>
-          <h2>This is the main content.</h2>
-        </>
+        <h2>This is the main content.</h2>
       </BasicLayout>,
     );
 
-    assert(
-      html.includes(`main class="-:flex-grow -:min-h-[100vh]"`),
-    );
+    assert(html.includes(`main class="-:flex-grow -:min-h-[100vh]"`));
     assert(html.includes(`<h2>This is the main content.</h2>`));
     assert(html.includes("This is a description of the test"));
     assert(html.includes("Hello World"));

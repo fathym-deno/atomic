@@ -4,10 +4,7 @@ import { StepsFeatures } from "../../src/organisms/StepsFeatures.tsx";
 Deno.test("StepsFeatures Tests", async (t) => {
   await t.step("Simple", () => {
     const html = preactRenderToString(
-      <StepsFeatures
-        step={1}
-        hideDescription={true}
-      >
+      <StepsFeatures step={1} hideDescription>
         {[
           {
             title: "Step 1",

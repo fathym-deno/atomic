@@ -40,6 +40,7 @@ export default function Tabs(props: TabsProps) {
       >
         {tabs.map((tab, index) => (
           <button
+            type="button"
             key={index}
             class={classSet([
               "py-2 px-1 font-medium text-sm",

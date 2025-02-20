@@ -1,3 +1,4 @@
+// deno-lint-ignore-file jsx-no-useless-fragment
 import { assert, preactRenderToString } from "../test.deps.ts";
 
 import { Action } from "../../src/atoms/Action.tsx";

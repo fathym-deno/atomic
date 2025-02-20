@@ -52,6 +52,7 @@ export function LineItem(props: LineItemProps): JSX.Element {
 
       {confirmIcon && (
         <button
+          type="button"
           class="ml-2"
           onClick={() => {
             handleAction().then();
